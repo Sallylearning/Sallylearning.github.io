@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo搭建Github静态博客 | 张大彬的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.安装准备工作1.1 安装Git1.2 安装node.js下载：http://nodejs.org/download/可以下载 node-v0.10.33-x64.msi安装时直接保持默认配置即可。">
+  <meta name="description" content="hexo是一款基于Node.js的静态博客框架慢慢学习，学习网上的教程，自己总结一下如何用Hexo搭建Github静态博客。期间有迷茫，想放弃。还好自己坚持下来了~把自己走的冤枉路给大家说一说免得大家也出错~">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo搭建Github静态博客">
 <meta property="og:url" content="http://yoursite.com/2017/02/09/hexo搭建博客/index.html">
 <meta property="og:site_name" content="张大彬的博客">
-<meta property="og:description" content="1.安装准备工作1.1 安装Git1.2 安装node.js下载：http://nodejs.org/download/可以下载 node-v0.10.33-x64.msi安装时直接保持默认配置即可。">
+<meta property="og:description" content="hexo是一款基于Node.js的静态博客框架慢慢学习，学习网上的教程，自己总结一下如何用Hexo搭建Github静态博客。期间有迷茫，想放弃。还好自己坚持下来了~把自己走的冤枉路给大家说一说免得大家也出错~">
 <meta property="og:image" content="http://i1.piimg.com/1949/031fec2f86098245.png">
-<meta property="og:updated_time" content="2017-02-22T09:00:43.892Z">
+<meta property="og:updated_time" content="2017-02-22T09:10:46.121Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建Github静态博客">
-<meta name="twitter:description" content="1.安装准备工作1.1 安装Git1.2 安装node.js下载：http://nodejs.org/download/可以下载 node-v0.10.33-x64.msi安装时直接保持默认配置即可。">
+<meta name="twitter:description" content="hexo是一款基于Node.js的静态博客框架慢慢学习，学习网上的教程，自己总结一下如何用Hexo搭建Github静态博客。期间有迷茫，想放弃。还好自己坚持下来了~把自己走的冤枉路给大家说一说免得大家也出错~">
 <meta name="twitter:image" content="http://i1.piimg.com/1949/031fec2f86098245.png">
   
     <link rel="alternative" href="/atom.xml" title="张大彬的博客" type="application/atom+xml">
@@ -179,7 +179,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-安装准备工作"><a href="#1-安装准备工作" class="headerlink" title="1.安装准备工作"></a>1.安装准备工作</h2><h3 id="1-1-安装Git"><a href="#1-1-安装Git" class="headerlink" title="1.1 安装Git"></a>1.1 安装Git</h3><h3 id="1-2-安装node-js"><a href="#1-2-安装node-js" class="headerlink" title="1.2 安装node.js"></a>1.2 安装node.js</h3><p>下载：<a href="http://nodejs.org/download/" target="_blank" rel="external">http://nodejs.org/download/</a><br>可以下载 node-v0.10.33-x64.msi<br>安装时直接保持默认配置即可。<br><a id="more"></a><br>下载完成后可以同时按下Win键和R键打开运行窗口,输入”cmd,然后输入以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git --version</div><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure></p>
+        <blockquote>
+<p>hexo是一款基于Node.js的静态博客框架<br>慢慢学习，学习网上的教程，自己总结一下如何用Hexo搭建Github静态博客。<br>期间有迷茫，想放弃。还好自己坚持下来了~<br>把自己走的冤枉路给大家说一说免得大家也出错~<br><a id="more"></a></p>
+<h2 id="1-安装准备工作"><a href="#1-安装准备工作" class="headerlink" title="1.安装准备工作"></a>1.安装准备工作</h2><h3 id="1-1-安装Git"><a href="#1-1-安装Git" class="headerlink" title="1.1 安装Git"></a>1.1 安装Git</h3><h3 id="1-2-安装node-js"><a href="#1-2-安装node-js" class="headerlink" title="1.2 安装node.js"></a>1.2 安装node.js</h3><p>下载：<a href="http://nodejs.org/download/" target="_blank" rel="external">http://nodejs.org/download/</a><br>可以下载 node-v0.10.33-x64.msi<br>安装时直接保持默认配置即可。<br>下载完成后可以同时按下Win键和R键打开运行窗口,输入”cmd,然后输入以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git --version</div><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure></p>
+</blockquote>
 <p><img src="http://i1.piimg.com/1949/031fec2f86098245.png" alt="Markdown"></p>
 <h2 id="2-配置Github"><a href="#2-配置Github" class="headerlink" title="2.配置Github"></a>2.配置Github</h2><h3 id="2-1-建立Repository"><a href="#2-1-建立Repository" class="headerlink" title="2.1 建立Repository"></a>2.1 建立Repository</h3><p>建立与你用户名对应的仓库,仓库名必须为<em>[your_user_name.github.io]</em></p>
 <h3 id="2-2-配置SSH-Key"><a href="#2-2-配置SSH-Key" class="headerlink" title="2.2 配置SSH-Key"></a>2.2 配置SSH-Key</h3><p>详情见网上的教程</p>
