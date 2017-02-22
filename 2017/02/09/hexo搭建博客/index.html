@@ -18,7 +18,7 @@
 <meta property="og:description" content="1.安装准备工作1.1 安装Git1.2 安装node.js下载：http://nodejs.org/download/可以下载 node-v0.10.33-x64.msi安装时直接保持默认配置即可。下载完成后可以同时按下Win键和R键打开运行窗口,输入”cmd,然后输入以下命令123git --versionnode -vnpm -v
 ！！！！图片！！！！！！
 2.配置Github2.1 建立R">
-<meta property="og:updated_time" content="2017-02-22T08:30:59.659Z">
+<meta property="og:updated_time" content="2017-02-22T08:32:25.187Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建Github静态博客">
 <meta name="twitter:description" content="1.安装准备工作1.1 安装Git1.2 安装node.js下载：http://nodejs.org/download/可以下载 node-v0.10.33-x64.msi安装时直接保持默认配置即可。下载完成后可以同时按下Win键和R键打开运行窗口,输入”cmd,然后输入以下命令123git --versionnode -vnpm -v
@@ -188,14 +188,13 @@
 <h2 id="2-配置Github"><a href="#2-配置Github" class="headerlink" title="2.配置Github"></a>2.配置Github</h2><h3 id="2-1-建立Repository"><a href="#2-1-建立Repository" class="headerlink" title="2.1 建立Repository"></a>2.1 建立Repository</h3><p>建立与你用户名对应的仓库,仓库名必须为<em>[your_user_name.github.io]</em></p>
 <h3 id="2-2-配置SSH-Key"><a href="#2-2-配置SSH-Key" class="headerlink" title="2.2 配置SSH-Key"></a>2.2 配置SSH-Key</h3><p>详情见网上的教程</p>
 <h2 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h2><p>关于Hexo的安装配置过程,请以官方给出的步骤为准。</p>
-<p>###3.1 Installation<br>随便找个地方(我是桌面)右键打开Git Bash打开Git命令行,执行如下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
+<h3 id="3-1-Installation"><a href="#3-1-Installation" class="headerlink" title="3.1 Installation"></a>3.1 Installation</h3><p>随便找个地方(我是桌面)右键打开Git Bash打开Git命令行,执行如下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
 <h3 id="3-2-Setup"><a href="#3-2-Setup" class="headerlink" title="3.2 Setup"></a>3.2 Setup</h3><p>一旦Hexo安装好了,我们选择一个地方来传建项目:),新建文件夹(我取名叫blog),在这个文件夹里右键打开Git Bash执行如下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div><div class="line">[info] Copying data</div><div class="line">[info] You are almost <span class="keyword">done</span>! Don<span class="string">'t forget to run `npm install` before you start b</span></div><div class="line">logging with Hexo!</div></pre></td></tr></table></figure></p>
 <p>如果不想手动创建文件夹，则执行如下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</div></pre></td></tr></table></figure></p>
 <p>Hexo随后会自动在目标文件夹建立网站所需要的文件。然后按照提示，运行 npm install<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure></p>
 <p>会在你选择的路径中安装 node_modules。</p>
 <h3 id="3-3-Start-the-server"><a href="#3-3-Start-the-server" class="headerlink" title="3.3 Start the server"></a>3.3 Start the server</h3><p>接着运行下面的命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div><div class="line">[info] Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure></p>
-<p>表明Hexo Server已经启动了，在浏览器中打开 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>这时可以看到Hexo已为你生成了一篇blog。</p>
-<p>你可以按Ctrl+C 停止Server。</p>
+<p>表明Hexo Server已经启动了，在浏览器中打开 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>这时可以看到Hexo已为你生成了一篇blog。<br>你可以按Ctrl+C 停止Server。</p>
 
       
 
