@@ -156,50 +156,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-jquery.goup.min" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        /*
- *
- * Copyright (c) 2014 Daniele Lenares (https://github.com/Ryuk87)
- * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
- * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
- * 
- * Version 0.5.1
- *
- */
-(function(e){function t(e,t,n){if(t=="show"){switch(n){case"fade":e.fadeIn();break;case"slide":e.slideDown();break;default:e.fadeIn()}}else{switch(n){case"fade":e.fadeOut();break;case"slide":e.slideUp();break;default:e.fadeOut()}}}e.goup=function(n){var r=e.extend({location:"right",locationOffset:20,bottomOffset:10,containerRadius:10,containerClass:"goup-container",arrowClass:"goup-arrow",alwaysVisible:false,trigger:500,entryAnimation:"fade",goupSpeed:"slow",hideUnderWidth:500,containerColor:"#000",arrowColor:"#fff",title:"",titleAsText:false,titleAsTextClass:"goup-text"},n);e("body").append('<div style="display:none" class="'+r.containerClass+'"></div>');var i=e("."+r.containerClass);e(i).html('<div class="'+r.arrowClass+'"></div>');var s=e("."+r.arrowClass);var o=r.location;if(o!="right"&&o!="left"){o="right"}var u=r.locationOffset;if(u<0){u=0}var a="r.bottomOffset;if(a<0){a=0}var" f="r.containerRadius;if(f<0){f=0}var" l="r.trigger;if(l<0){l=0}var" c="r.hideUnderWidth;if(c<0){c=0}var" h="/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;if(h.test(r.containerColor)){var" p="r.containerColor}else{var" }if(h.test(r.arrowcolor)){var="" d="r.arrowColor}else{var" }if(r.title="==""){r.titleAsText=false}var" v="{};v={position:"fixed",width:40,height:40,background:p,cursor:"pointer"};v["bottom"]=a;v[o]=u;v["border-radius"]=f;e(i).css(v);if(!r.titleAsText){e(i).attr("title",r.title)}else{e("body").append('<div" class="'+r.titleAsTextClass+'">'+r.title+"");var m=e("."+r.titleAsTextClass);e(m).attr("style",e(i).attr("style"));e(m).css("background","transparent").css("width",80).css("height","auto").css("text-align","center").css(o,u-20);var g=e(m).height()+10;e(i).css("bottom","+="+g+"px")}var y={};y={width:0,height:0,margin:"0 auto","padding-top":13,"border-style":"solid","border-width":"0 10px 10px 10px","border-color":"transparent transparent "+d+" transparent"};e(s).css(y);var b=false;e(window).resize(function(){if(e(window).outerWidth()<=c){b=true;t(e(i),"hide",r.entryanimation);if(m)t(e(m),"hide",r.entryanimation)}else{b=false;e(window).trigger("scroll")}});if(e(window).outerwidth()<=c){b=true;e(i).hide();if(m)e(m).hide()}if(!r.alwaysvisible){e(window).scroll(function(){if(e(window).scrolltop()>=l&&!b){t(e(i),"show",r.entryAnimation);if(m)t(e(m),"show",r.entryAnimation)}if(e(window).scrollTop()<l&&!b){t(e(i),"hide",r.entryanimation);if(m)t(e(m),"hide",r.entryanimation)}})}else{t(e(i),"show",r.entryanimation);if(m)t(e(m),"show",r.entryanimation)}if(e(window).scrolltop()>=l&&!b){t(e(i),"show",r.entryAnimation);if(m)t(e(m),"show",r.entryAnimation)}e(i).on("click",function(){e("html,body").animate({scrollTop:0},r.goupSpeed);return false});e(m).on("click",function(){e("html,body").animate({scrollTop:0},r.goupSpeed);return false})}})(jQuery)</l&&!b){t(e(i),"hide",r.entryanimation);if(m)t(e(m),"hide",r.entryanimation)}})}else{t(e(i),"show",r.entryanimation);if(m)t(e(m),"show",r.entryanimation)}if(e(window).scrolltop()></=c){b=true;t(e(i),"hide",r.entryanimation);if(m)t(e(m),"hide",r.entryanimation)}else{b=false;e(window).trigger("scroll")}});if(e(window).outerwidth()<=c){b=true;e(i).hide();if(m)e(m).hide()}if(!r.alwaysvisible){e(window).scroll(function(){if(e(window).scrolltop()></0){u=0}var>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/25/jquery.goup.min/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-hexo搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -285,8 +241,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script></p>
-<p><script type="text/javascript" src="jquery.goup.min.js"></script><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
