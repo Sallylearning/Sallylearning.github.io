@@ -18,7 +18,7 @@ Vue是一个mvvm框架(库)。指令以v-xxx为结构一段html代码 加一个j
 <meta property="og:description" content="Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。
 
 Vue是一个mvvm框架(库)。指令以v-xxx为结构一段html代码 加一个json  再new出一个vue实例">
-<meta property="og:updated_time" content="2017-03-02T11:45:27.129Z">
+<meta property="og:updated_time" content="2017-03-02T12:59:01.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue学习笔记（一）">
 <meta name="twitter:description" content="Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。
@@ -186,8 +186,61 @@ Vue是一个mvvm框架(库)。指令以v-xxx为结构一段html代码 加一个j
 </blockquote>
 <p>Vue是一个mvvm框架(库)。指令以v-xxx为结构<br>一段html代码 加一个json  再new出一个vue实例</p>
 <a id="more"></a>
-<p>vue的雏形<br>要求：展示一条数据<br>html：<br>    <div id="box"><br>        <br>    </div></p>
-<p>js：<br>    var c = new Vue({    //new出Vue额对象<br>           el:’#box’, //选择器，和jquery一样<br>           data:{ //data里可以放字符串，json ，数组， 布尔，数字<br>                   msg:’document’   //要展示的数据内容<br>                   num:12,<br>                   bool:true,<br>                    myData:[]<br>                    …….<br>            }<br>    });<br>   注意： 这里的c是可以任意起名的，也可以不写，不写的话就是this。想要拿到里面的num的值，可以这样 this.data.num </p>
+<p>vue的雏形<br>要求：展示一条数据<br>html：<br> <code>&lt;div id=&quot;box&quot;&gt;
+        
+    &lt;/div&gt;</code></p>
+<p>js：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">   <span class="keyword">var</span> c = <span class="keyword">new</span> Vue(&#123;    <span class="comment">//new出Vue额对象</span></div><div class="line">           el:<span class="string">'#box'</span>, <span class="comment">//选择器，和jquery一样</span></div><div class="line">           data:&#123; <span class="comment">//data里可以放字符串，json ，数组， 布尔，数字</span></div><div class="line">              	msg:<span class="string">'document'</span> ,  <span class="comment">//要展示的数据内容</span></div><div class="line">              	num:<span class="number">12</span>,</div><div class="line">              	<span class="attr">bool</span>:<span class="literal">true</span>,</div><div class="line">		<span class="attr">myData</span>:[],</div><div class="line">		.......</div><div class="line">		&#125;，</div><div class="line">		methods:&#123;</div><div class="line">			get()&#123;</div><div class="line">			<span class="comment">//get方法</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意： 这里的c是可以任意起名的，也可以不写，不写的话就是this。想要拿到里面的num的值，可以这样 this.data.num </p>
+</blockquote>
+<hr>
+<h2 id="vue常用指令"><a href="#vue常用指令" class="headerlink" title="vue常用指令"></a>vue常用指令</h2><h3 id="1-v-model"><a href="#1-v-model" class="headerlink" title="1.v-model"></a>1.v-model</h3><p>一般放在表单元素上(input)   –&gt;     双向数据绑定<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"msg"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="2-v-for-循环数组"><a href="#2-v-for-循环数组" class="headerlink" title="2.v-for 循环数组"></a>2.v-for 循环数组</h3><p>新数组语法<br>        value in arr<br>        (value, index) in arr<br>新对象语法<br>        value in obj<br>        (value, key) in obj<br>        (value, key, index) in obj</p>
+<h3 id="3-v-on-click-”函数”-事件"><a href="#3-v-on-click-”函数”-事件" class="headerlink" title="3.v-on:click=”函数” 事件"></a>3.v-on:click=”函数” 事件</h3><p>v-on:click/mouseout/mouseover/dblclick/mousedown…..</p>
+<blockquote>
+<p>v-on:click=”show()”   一般是这样</p>
+</blockquote>
+<p>  @click=”show()” 这是简写 建议用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">methods:&#123;                      <span class="comment">//事件放到methods里</span></div><div class="line">        事件名:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;     <span class="comment">//可以直接写成  事件名 ()&#123;&#125;</span></div><div class="line">            alert(<span class="number">1</span>);</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>事件对象：<br>$event定死的，必须有$<br>@click(show($event))</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">methods:&#123;</div><div class="line">    <span class="attr">show</span>:<span class="function"><span class="keyword">function</span>(<span class="params">ev,n</span>)</span>&#123;</div><div class="line">        alert(ev.clientX);</div><div class="line">        alert(n);<span class="comment">//n也可以拿到</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>键盘事件：<br>@keydown    $event    ev.keyCode<br>@keyup</p>
+</blockquote>
+<p>常用键:<br>    回车<br>    a). @keyup.13<br>    b). @keyup.enter<br>    上、下、左、右<br>    @keyup/keydown.left<br>    @keyup/keydown.right<br>    @keyup/keydown.up<br>    @keyup/keydown.down</p>
+<h3 id="v-show-显示-隐藏"><a href="#v-show-显示-隐藏" class="headerlink" title="v-show 显示/隐藏"></a>v-show 显示/隐藏</h3><p>v-show=’true/false’; true是显示 false是隐藏</p>
+<h3 id="v-bind-属性"><a href="#v-bind-属性" class="headerlink" title="v-bind 属性"></a>v-bind 属性</h3><p>v-bind:src=””<br>    width/height/title….<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">"url"</span> <span class="attr">id</span>=<span class="string">"img"</span> <span class="attr">:width</span>=<span class="string">'a'</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>特殊属性:class&amp;style<br>    :class=””    v-bind:class=””<br>    :style=””    v-bind:style=””</p>
+</blockquote>
+<h4 id="class"><a href="#class" class="headerlink" title="class"></a>class</h4><ol>
+<li><p>:class=[red,blue]  //对应的是数据 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">data&#123;</div><div class="line">    <span class="attr">red</span>:<span class="string">'red'</span>,</div><div class="line">    blue<span class="string">'blue'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>:class=”{red:a,blue:b}” //对应的是 类名和数据</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">data&#123;</div><div class="line">    <span class="attr">a</span>:<span class="literal">true</span>,</div><div class="line">    <span class="attr">b</span>:<span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>：clsss=”json”;  //也可以吧json直接写到数据里，看起来更舒服-推荐</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">data&#123;</div><div class="line">    <span class="attr">json</span>:&#123;</div><div class="line">       <span class="attr">red</span>:<span class="literal">true</span>,</div><div class="line">       <span class="attr">blue</span>:<span class="literal">false</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="style"><a href="#style" class="headerlink" title="style"></a>style</h4><ol>
+<li>:styel=[c,d];/.每一个样式都是一条json<pre><code class="javascript">data:{
+<span class="attr">c</span>:{<span class="attr">color</span>:<span class="string">'red'</span>},
+<span class="attr">d</span>:{<span class="attr">backgroundColor</span>:<span class="string">'blue'</span>}<span class="comment">//复合样式用驼峰命名法</span>
+}
+</code></pre>
+</li>
+<li>:style={json};<pre><code class="javascript">data:{
+ json{
+    <span class="attr">color</span>:<span class="string">"red"</span>,
+    <span class="attr">background</span>:<span class="string">"blue"</span>
+ }
+}
+</code></pre>
+###</li>
+</ol>
 
       
 
