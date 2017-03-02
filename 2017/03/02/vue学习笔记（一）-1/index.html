@@ -8,16 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>vue学习笔记（一） | 张大彬的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一只菜鸟彬的漫漫学习之路">
+  <meta name="description" content="Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。
+
+Vue是一个mvvm框架(库)。指令以v-xxx为结构一段html代码 加一个json  再new出一个vue实例">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue学习笔记（一）">
 <meta property="og:url" content="http://yoursite.com/2017/03/02/vue学习笔记（一）-1/index.html">
 <meta property="og:site_name" content="张大彬的博客">
-<meta property="og:description" content="一只菜鸟彬的漫漫学习之路">
-<meta property="og:updated_time" content="2017-03-02T11:40:41.477Z">
+<meta property="og:description" content="Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。
+
+Vue是一个mvvm框架(库)。指令以v-xxx为结构一段html代码 加一个json  再new出一个vue实例">
+<meta property="og:updated_time" content="2017-03-02T11:44:39.434Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue学习笔记（一）">
-<meta name="twitter:description" content="一只菜鸟彬的漫漫学习之路">
+<meta name="twitter:description" content="Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。
+
+Vue是一个mvvm框架(库)。指令以v-xxx为结构一段html代码 加一个json  再new出一个vue实例">
   
     <link rel="alternative" href="/atom.xml" title="张大彬的博客" type="application/atom+xml">
   
@@ -175,7 +181,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <blockquote>
+<p>Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。</p>
+</blockquote>
+<p>Vue是一个mvvm框架(库)。指令以v-xxx为结构<br>一段html代码 加一个json  再new出一个vue实例</p>
+<a id="more"></a>
+<p>vue的雏形<br>要求：展示一条数据<br>html：<br>    <div id="box"><br>        <br>    </div></p>
+<p>js：<br>    var c = new Vue({    //new出Vue额对象<br>           el:’#box’, //选择器，和jquery一样<br>           data:{ //data里可以放字符串，json ，数组， 布尔，数字<br>                   msg:’document’   //要展示的数据内容<br>                   num:12,<br>                   bool:true,<br>                    myData:[]<br>                    …….<br>            }<br>    });<br>   注意： 这里的c是可以任意起名的，也可以不写，不写的话就是this。想要拿到里面的num的值，可以这样 this.data.num </p>
+
       
 
       
