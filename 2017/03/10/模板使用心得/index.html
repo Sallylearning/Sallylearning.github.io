@@ -14,29 +14,18 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/10/模板使用心得/index.html">
 <meta property="og:site_name" content="张大彬的博客">
 <meta property="og:description" content="在CI框架中，利用one ui模板自己搭建一个自己想要的界面。o(*≧▽≦)ツ期间我遇见很多问题，ಥ_ಥ 马克一下我自己翻越的小山和摔过的坑。">
-<meta property="og:image" content="http://p1.bqimg.com/1949/d9d2e25d54fab601.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/c709ce8b0947b4a9.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/8e86d9511d46a089.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/1d6e7ae7113c180c.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/aea71f3e31e20db2.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/53682c63faaf74ff.gif">
-<meta property="og:image" content="http://p1.bqimg.com/587781/752c7c4944783aa8.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/84dfa0b339d1fccf.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/9c799c7a3447f0eb.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/106b1e169ce326f1.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/358d9e2583a7866c.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/d2b0022db88b3380.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/ff43d18eeb1e44c0.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/47796e3ba2600a2e.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/84f1eb48eb6061af.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/de7d8c5406597ead.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/7c6aa859e0497ea0.png">
-<meta property="og:image" content="http://p1.bqimg.com/587781/1e6c537b647dffae.png">
-<meta property="og:updated_time" content="2017-03-17T09:30:13.383Z">
+<meta property="og:image" content="http://i4.bvimg.com/587781/3bab1f13376bab38.jpg">
+<meta property="og:image" content="http://i4.bvimg.com/587781/9ea6a4d42036adb8.jpg">
+<meta property="og:image" content="http://i4.bvimg.com/587781/35039dc056c29b20.jpg">
+<meta property="og:image" content="http://i4.bvimg.com/587781/d57678299db2c90e.jpg">
+<meta property="og:image" content="http://i4.bvimg.com/587781/86f52a2c28c589a9.jpg">
+<meta property="og:image" content="http://i4.bvimg.com/587781/753cacd6c9d3c912.jpg">
+<meta property="og:image" content="http://i2.bvimg.com/587781/433ac689815c1808.jpg">
+<meta property="og:updated_time" content="2017-10-30T13:36:52.123Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模板使用心得">
 <meta name="twitter:description" content="在CI框架中，利用one ui模板自己搭建一个自己想要的界面。o(*≧▽≦)ツ期间我遇见很多问题，ಥ_ಥ 马克一下我自己翻越的小山和摔过的坑。">
-<meta name="twitter:image" content="http://p1.bqimg.com/1949/d9d2e25d54fab601.png">
+<meta name="twitter:image" content="http://i4.bvimg.com/587781/3bab1f13376bab38.jpg">
   
     <link rel="alternative" href="/atom.xml" title="张大彬的博客" type="application/atom+xml">
   
@@ -191,24 +180,40 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在CI框架中，利用one ui模板自己搭建一个自己想要的界面。o(*≧▽≦)ツ<br>期间我遇见很多问题，ಥ_ಥ 马克一下我自己翻越的小山和摔过的坑。<br><a id="more"></a></p>
+<h2 id="侧边栏问题"><a href="#侧边栏问题" class="headerlink" title="侧边栏问题"></a>侧边栏问题</h2><h4 id="1-侧边栏高亮问题"><a href="#1-侧边栏高亮问题" class="headerlink" title="1.侧边栏高亮问题"></a>1.侧边栏高亮问题</h4><p><img src="http://i4.bvimg.com/587781/3bab1f13376bab38.jpg" alt="Markdown"><br><img src="http://i4.bvimg.com/587781/9ea6a4d42036adb8.jpg" alt="Markdown"></p>
 <blockquote>
-<p>修改index.php入口文件进入的第一个controller控制器。默认是welcome。</p>
+<p>解决办法 ：<br>在inc文件下的config.php文件里面 </p>
 </blockquote>
-<h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><p>1.直接修改welcome里面的东西，改成自己想要的。<br>2.修改config文件夹里面的routes.php</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://p1.bqimg.com/1949/d9d2e25d54fab601.png" alt="Markdown"></h2><blockquote>
-<p>缺少js<br><img src="http://p1.bqimg.com/587781/c709ce8b0947b4a9.png" alt="Markdown"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$one-&gt;main_nav_active              = get_basename($_SERVER[&apos;PHP_SELF&apos;]);</div><div class="line">// var_dump($one-&gt;main_nav_active);</div></pre></td></tr></table></figure>
+<p>var_dump看$one-&gt;main_nav_active出来是什么<br>然后在对应的url上添加一个urlc</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">array(</div><div class="line">    &apos;name&apos;  =&gt; &apos;&lt;span class=&quot;sidebar-mini-hide&quot;&gt;用户列表&lt;/span&gt;&apos;,</div><div class="line">    &apos;icon&apos;  =&gt; &apos;fa fa-list&apos;,</div><div class="line">    &apos;urlc&apos;   =&gt; &apos;userlist_weibo&apos;,</div><div class="line">    &apos;url&apos;   =&gt; &apos;/weibo/userlist_weibo&apos;</div><div class="line">),</div></pre></td></tr></table></figure>
+<p>最后改变在inc文件下的views文件夹里面的Template.php文件里面的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$link_active    = $link_urlc == $this-&gt;main_nav_active ? true : false;</div></pre></td></tr></table></figure>
+<p><img src="http://i4.bvimg.com/587781/35039dc056c29b20.jpg" alt="Markdown"></p>
+<h4 id="2-不同用户看到的侧边栏不同"><a href="#2-不同用户看到的侧边栏不同" class="headerlink" title="2.不同用户看到的侧边栏不同"></a>2.不同用户看到的侧边栏不同</h4><p><img src="http://i4.bvimg.com/587781/d57678299db2c90e.jpg" alt="Markdown"><br><img src="http://i4.bvimg.com/587781/86f52a2c28c589a9.jpg" alt="Markdown"></p>
+<blockquote>
+<p>解决办法 ：<br>在inc文件下的config.php文件里面 ，创建多个Menu </p>
 </blockquote>
-<p>无法正常显示界面：<br><img src="http://p1.bqimg.com/587781/8e86d9511d46a089.png" alt="Markdown"></p>
-<h3 id="错误原因"><a href="#错误原因" class="headerlink" title="错误原因"></a>错误原因</h3><p>没有配置好</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>配置config文件夹里面的autoload.php<br><img src="http://p1.bqimg.com/587781/1d6e7ae7113c180c.png" alt="Markdown"><br>配置inc文件夹里面的view文件夹里面的template_head_start.php。添加如下语句：</p>
-<h2 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="http://p1.bqimg.com/587781/aea71f3e31e20db2.png" alt="Markdown"></h2><blockquote>
-<p>很多相同界面用一个界面展示，鼠标点击实现不同的跳转</p>
+<p><img src="http://i4.bvimg.com/587781/753cacd6c9d3c912.jpg" alt="Markdown"></p>
+<p>然后修改inc文件下的views文件夹里面的Template.php文件里面的build_nav函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * Builds main navigation</div><div class="line"> *</div><div class="line"> * @param   boolean     $print True to print the navigation and False to return it</div><div class="line"> *</div><div class="line"> * @return  string      Returns the navigation if $print is set to false</div><div class="line"> */</div><div class="line">public function build_nav($print = true) &#123;</div><div class="line">    // Build navigation</div><div class="line">    $role=$_SESSION[&apos;role&apos;];</div><div class="line">    //echo $_SESSION[&apos;username&apos;];</div><div class="line">    if($role==&quot;admin&quot;)&#123;</div><div class="line">        $this-&gt;build_nav_array($this-&gt;main_nav_admin);</div><div class="line">     &#125;</div><div class="line">    if ($role==&quot;common&quot;) &#123;</div><div class="line">        $this-&gt;build_nav_array($this-&gt;main_nav_common);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // Print or return navigation</div><div class="line">    if ($print) &#123;</div><div class="line">        echo $this-&gt;nav_html;</div><div class="line">    &#125; else &#123;</div><div class="line">        return $this-&gt;nav_html;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="入口文件问题"><a href="#入口文件问题" class="headerlink" title="入口文件问题"></a>入口文件问题</h2><p>修改默认入口文件，默认情况下是welcome.php</p>
+<blockquote>
+<p>解决办法<br>1.直接修改welcome里面的东西，改成自己想要的。<br>2.修改config文件夹里面的routes.php</p>
 </blockquote>
-<p>如：<br><img src="http://p1.bqimg.com/587781/53682c63faaf74ff.gif" alt="Markdown"><br><img src="http://p1.bqimg.com/587781/752c7c4944783aa8.png" alt="Markdown"><br><img src="http://p1.bqimg.com/587781/84dfa0b339d1fccf.png" alt="Markdown"></p>
-<h3 id="解决办法-1"><a href="#解决办法-1" class="headerlink" title="解决办法"></a>解决办法</h3><p>在inc文件夹下面的config.php中修改<br><img src="http://p1.bqimg.com/587781/9c799c7a3447f0eb.png" alt="Markdown"><br>代表从index.php入口文件进入后，进入userpage这个controller，在进入userpage这个controller里面的index函数，传入参数1743951792<br><img src="http://p1.bqimg.com/587781/106b1e169ce326f1.png" alt="Markdown"><br>然后var_dump一下这个数组，看看数组格式，根据格式修改view界面<br><img src="http://p1.bqimg.com/587781/358d9e2583a7866c.png" alt="Markdown"><br><strong>ATTENTION:</strong><br>在进行这个操作时，模板左边的sidebar不显示选中高亮，也不保持open状态。<br>又回到<br><img src="http://p1.bqimg.com/587781/d2b0022db88b3380.png" alt="Markdown"><br>和我们想要的效果不一样，我们想要点击后高亮并且跳转<br><img src="http://p1.bqimg.com/587781/ff43d18eeb1e44c0.png" alt="Markdown"></p>
-<h3 id="错误原因："><a href="#错误原因：" class="headerlink" title="错误原因："></a>错误原因：</h3><p><img src="http://p1.bqimg.com/587781/47796e3ba2600a2e.png" alt="Markdown"><br>在运行config文件中的这句话时，发现main_nav_active只识别了我们url最后面的，如果此时我们还是用url的话则永远都不相等，都会返回FALSE。<br><img src="http://p1.bqimg.com/587781/84f1eb48eb6061af.png" alt="Markdown"></p>
-<h3 id="解决办法：-1"><a href="#解决办法：-1" class="headerlink" title="解决办法："></a>解决办法：</h3><p>此时先修改config文件，加上一个可以识别的urlc<br><img src="http://p1.bqimg.com/587781/de7d8c5406597ead.png" alt="Markdown"><br>在修改inc文件下面的classes文件夹里面的Template.php文件<br><img src="http://p1.bqimg.com/587781/7c6aa859e0497ea0.png" alt="Markdown"><br><img src="http://p1.bqimg.com/587781/1e6c537b647dffae.png" alt="Markdown"></p>
-
+<p><img src="http://i2.bvimg.com/587781/433ac689815c1808.jpg" alt="Markdown"></p>
+<p>p.s：在添加了登录页面之后，默认入口文件应该是主页的控制器文件！！！</p>
+<h2 id="session过期问题"><a href="#session过期问题" class="headerlink" title="session过期问题"></a>session过期问题</h2><p>登录系统后短时间退出系统再进不需要登录，如果session过期，则跳转到login界面重新登陆</p>
+<blockquote>
+<p>解决办法<br>在控制器的构造函数里加上<br>if(!$this-&gt;session-&gt;userdata(‘login’)){header(‘location:<a href="http://&#39;.base_url().&#39;login&#39;);}" target="_blank" rel="external">http://&#39;.base_url().&#39;login&#39;);}</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public function __construct()</div><div class="line">&#123;</div><div class="line">	parent::__construct();</div><div class="line">	if(!$this-&gt;session-&gt;userdata(&apos;login&apos;))&#123;header(&apos;location:http://&apos;.base_url().&apos;login&apos;);&#125;</div><div class="line">	$this-&gt;load-&gt;library(&apos;Mongo_db&apos;);</div><div class="line">	$this-&gt;load-&gt;library(&apos;pagination&apos;);</div><div class="line">	$this-&gt;load-&gt;library(&apos;MY_Pagination&apos;);</div><div class="line">	$this-&gt;load-&gt;model(&apos;twitter/userpage_twitter_m&apos;);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="路径问题"><a href="#路径问题" class="headerlink" title="路径问题"></a>路径问题</h2><h4 id="缺少js-css"><a href="#缺少js-css" class="headerlink" title="缺少js,css"></a>缺少js,css</h4><blockquote>
+<p>仔细检查资源文件，看看路径哪错了 </p>
+<h5 id="加-从项目根目录出发-不加-从当前目录出发"><a href="#加-从项目根目录出发-不加-从当前目录出发" class="headerlink" title="加/,从项目根目录出发 不加/,从当前目录出发"></a>加/,从项目根目录出发 不加/,从当前目录出发</h5></blockquote>
+<h2 id="数据库问题"><a href="#数据库问题" class="headerlink" title="数据库问题"></a>数据库问题</h2><blockquote>
+<p>配置application文件夹里面的config.php文件夹里面的autoload.php<br> 对$autoload[‘libraries’]</p>
+</blockquote>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$autoload[&apos;libraries&apos;] = array(&apos;database&apos;, &apos;session&apos;);</div></pre></td></tr></table></figure>
       
 
       
