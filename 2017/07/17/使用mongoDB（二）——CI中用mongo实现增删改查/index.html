@@ -8,16 +8,31 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>使用mongoDB（二）——CI中用mongo实现增删改查 | 张大彬的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一只菜鸟彬的漫漫学习之路">
+  <meta name="description" content="tips：用前人写好的类库会节省不少时间！
+
+http://intekhab.in/mongodb-library-for-codeigniter.html
+连接mongodb已经写好了，只需要配置就好了需要的增删改查里面都有，而且都贴心的附上了小栗子
+安装方法1.将 mongodb.php 放到config目录。2.将 Mongo_db.php 放到library目录。
+使用方法1.首先在co">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用mongoDB（二）——CI中用mongo实现增删改查">
 <meta property="og:url" content="http://yoursite.com/2017/07/17/使用mongoDB（二）——CI中用mongo实现增删改查/index.html">
 <meta property="og:site_name" content="张大彬的博客">
-<meta property="og:description" content="一只菜鸟彬的漫漫学习之路">
-<meta property="og:updated_time" content="2017-07-17T14:55:12.409Z">
+<meta property="og:description" content="tips：用前人写好的类库会节省不少时间！
+
+http://intekhab.in/mongodb-library-for-codeigniter.html
+连接mongodb已经写好了，只需要配置就好了需要的增删改查里面都有，而且都贴心的附上了小栗子
+安装方法1.将 mongodb.php 放到config目录。2.将 Mongo_db.php 放到library目录。
+使用方法1.首先在co">
+<meta property="og:updated_time" content="2017-10-31T03:18:42.822Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用mongoDB（二）——CI中用mongo实现增删改查">
-<meta name="twitter:description" content="一只菜鸟彬的漫漫学习之路">
+<meta name="twitter:description" content="tips：用前人写好的类库会节省不少时间！
+
+http://intekhab.in/mongodb-library-for-codeigniter.html
+连接mongodb已经写好了，只需要配置就好了需要的增删改查里面都有，而且都贴心的附上了小栗子
+安装方法1.将 mongodb.php 放到config目录。2.将 Mongo_db.php 放到library目录。
+使用方法1.首先在co">
   
     <link rel="alternative" href="/atom.xml" title="张大彬的博客" type="application/atom+xml">
   
@@ -171,7 +186,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <blockquote>
+<p><font size="5">tips</font>：<br>用前人写好的类库会节省不少时间！</p>
+</blockquote>
+<p><a href="http://intekhab.in/mongodb-library-for-codeigniter.html" target="_blank" rel="external">http://intekhab.in/mongodb-library-for-codeigniter.html</a></p>
+<p>连接mongodb已经写好了，只需要配置就好了<br>需要的增删改查里面都有，而且都贴心的附上了小栗子</p>
+<h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a><font size="5">安装方法</font></h2><p>1.将 mongodb.php 放到config目录。<br>2.将 Mongo_db.php 放到library目录。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a><font size="5">使用方法</font></h2><h4 id="1-首先在controller控制器中引入mongodb-php"><a href="#1-首先在controller控制器中引入mongodb-php" class="headerlink" title="1.首先在controller控制器中引入mongodb.php"></a>1.首先在controller控制器中引入mongodb.php</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$this-&gt;load-&gt;library(&apos;Mongo_db&apos;);</div></pre></td></tr></table></figure>
+<h4 id="2-在models中使用"><a href="#2-在models中使用" class="headerlink" title="2.在models中使用"></a>2.在models中使用</h4><p>举个栗子：↓↓↓<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$order_by = [&apos;id&apos; =&gt; -1];</div><div class="line">$where    = [&apos;status&apos; =&gt; 1];</div><div class="line">$res      = $this-&gt;mongo_db</div><div class="line">            -&gt;select($fields)</div><div class="line">            -&gt;order_by($order_by)</div><div class="line">            -&gt;limit(21)</div><div class="line">            -&gt;where_between(&apos;time_stamp&apos;, $start_date, $end_date)</div><div class="line">            -&gt;where($where)</div><div class="line">            -&gt;get(&apos;table_name&apos;);</div></pre></td></tr></table></figure></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a><font size="5">其他</font></h2><p>有时候类库并没有我们需要的函数，比如聚合，我们就需要自己写<br>这时候我们就不能继续用<br>$res   = $this-&gt;mongo_db<br>我们就要自己新连接数据库然后在进行相应的操作</p>
+<h4 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$conn = new MongoClient();                            #默认本地的连接</div><div class="line">$conn = new MongoClient(&quot;mongodb://服务器地址:27017&quot;); #其他链接，默认端口号是27017</div><div class="line">$db = $conn-&gt;db;                                      #选择名为db的数据库</div><div class="line">$db=$conn-&gt;selectDB(&quot;mydb&quot;);                  #第二种写法</div><div class="line">$collection = $db-&gt;collection                 #选择一个数据库表（集合）</div><div class="line">$collection=$db-&gt;selectCollection(&apos;column&apos;);  #第二种写法</div><div class="line">$collection=$conn-&gt;mydb-&gt;column;              #更简洁的写法</div></pre></td></tr></table></figure>
+<h4 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$data = $collection-&gt;find(array(&apos;name&apos;=&gt;&apos;goudan&apos;,&apos;ip&apos;=&gt;&apos;192.168.1.1&apos;));</div><div class="line">$data = $collection-&gt;find(array(&apos;age&apos;=&gt;array(&apos;$gt&apos;=&gt;20,&apos;$lt&apos;=&gt;80)));</div><div class="line">$data = $collection-&gt;findOne();#查询一条结果</div></pre></td></tr></table></figure>
+<blockquote>
+<p>$gt为大于、$gte为大于等于、$lt为小于、$lte为小于等于、$ne为不等于、$exists不存在；</p>
+</blockquote>
+<h5 id="查询结果处理"><a href="#查询结果处理" class="headerlink" title="查询结果处理"></a>查询结果处理</h5><p>查询结果返回的是MongoCursor，是mongo的游标，一般使用foreach即可读取里面的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">foreach($data as $key =&gt; $value)&#123;</div><div class="line">  var_dump($key);</div><div class="line">  var_dump($value);</div><div class="line">    ....</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>但是我们更习惯使用数组，就可以使用 iterator_to_array() 将游标转换成一个数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$cursor = $collection-&gt;find();</div><div class="line">$array = iterator_to_array($cursor);</div><div class="line">这样输出的则是数组类型的。</div></pre></td></tr></table></figure>
+<blockquote>
+<p>【注】使用 iterator_to_array() 会让驱动将强制载入所有搜索结果集到内存，所以对超过内存大小的结果集不要这么做</p>
+</blockquote>
+<h5 id="mongodb数据格式"><a href="#mongodb数据格式" class="headerlink" title="mongodb数据格式"></a>mongodb数据格式</h5><blockquote>
+<p>mongodb获取的时间是时间戳格式我们要进行相应的转化<br> mongodb自带的’_id’是object，也要进行相应的转换</p>
+</blockquote>
+<p><b>1.日期</b><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">#MongoDate类型格式如下：</div><div class="line">[timestamp] =&gt; MongoDate Object</div><div class="line">(</div><div class="line">    [sec] =&gt; 1379495520  #表当前时间</div><div class="line">    [usec] =&gt; 0          #时间精确到微秒 </div><div class="line">)</div><div class="line">#转化时间</div><div class="line">$timestamp = date(&quot;Y-m-d H:i&quot;, $start-&gt;sec); #start使我们获取到的时间</div><div class="line">   </div><div class="line">/*创建MongoDate类型*/</div><div class="line">$start = new MongoDate($startRaw);   #创建MongoDate类型，$startRaw可为时间戳类型</div><div class="line">#如：</div><div class="line">$start = new MongoDate(strtotime(&apos;2016-4-7 12:00:00&apos;));</div><div class="line">$end = new MongoDate(strtotime(&apos;2016-4-8 12:00:00&apos;));</div><div class="line">/*查询某个时间段内的数据*/</div><div class="line">$time=$collection-&gt;find(array(&apos;timestamp&apos;=&gt;array(&apos;$gt&apos;=&gt;$start,&apos;$lte&apos;=&gt;$end))) </div><div class="line">   </div><div class="line">/*查询一星期内的数据*/</div><div class="line">$lastweek = new MongoDate(strtotime(&apos;-1 week&apos;));   </div><div class="line">$data = $collection-&gt;find(array(&apos;timestamp&apos; =&gt; array(&apos;$gt&apos; =&gt;     $lastweek)));</div></pre></td></tr></table></figure></p>
+<p><b>2.id</b></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*使用下面的方法来匹配</div><div class="line">&#123;&quot;_id&quot;:ObjectId(&quot;56df8bbed7bc8d047cc7dfa7&quot;)&#125;</div><div class="line">查询、更新也一样</div><div class="line"></div><div class="line">$id = new MongoId(&quot;56df8bbed7bc8d047cc7dfa7&quot;);</div><div class="line">$data = $collection-&gt;find(array(&apos;_id&apos;=&gt;(object)$id));</div><div class="line">或者</div><div class="line">$data = $collection-&gt;find(array(&apos;_id&apos;=&gt;$id));</div></pre></td></tr></table></figure>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$collection-&gt;remove(array(&quot;title&quot;=&gt;&quot;MongoDB 教程&quot;), array(&quot;justOne&quot; =&gt; true));</div><div class="line">//remove中的代表的是筛选条件</div></pre></td></tr></table></figure>
+<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$m = new MongoClient();    // 连接到mongodb</div><div class="line">$db = $m-&gt;test;            // 选择一个数据库</div><div class="line">$collection = $db-&gt;testcollection; // 选择集合</div><div class="line">// 更新文档</div><div class="line">$collection-&gt;update(array(&quot;title&quot;=&gt;&quot;MongoDB&quot;), array(&apos;$set&apos;=&gt;array(&quot;title&quot;=&gt;&quot;MongoDB 教程&quot;)));</div><div class="line">//在update里的第一个选项代表筛选&apos;title&apos;为&apos;MongoDB&apos;的数据 将‘title‘更新为’MongoDB教程‘；</div></pre></td></tr></table></figure>
+<h4 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$m = new MongoClient();    // 连接到mongodb</div><div class="line">$db = $m-&gt;test;            // 选择一个数据库</div><div class="line">$collection = $db-&gt;testcollection; // 选择集合</div><div class="line">$document = array( </div><div class="line">	&quot;title&quot; =&gt; &quot;MongoDB&quot;, </div><div class="line">	&quot;description&quot; =&gt; &quot;database&quot;</div><div class="line">);</div><div class="line">$collection-&gt;insert($document);</div><div class="line">echo &quot;数据插入成功&quot;;；</div></pre></td></tr></table></figure>
       
 
       
