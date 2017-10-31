@@ -6,24 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>vue学习笔记（一） | 张大彬的博客</title>
+  <title>Archives: 2017/8 | 张大彬的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。
-
-Vue是一个mvvm框架(库)。指令以v-xxx为结构一段html代码 加一个json  再new出一个vue实例">
-<meta property="og:type" content="article">
-<meta property="og:title" content="vue学习笔记（一）">
-<meta property="og:url" content="http://yoursite.com/2017/03/02/vue学习笔记（一）/index.html">
+  <meta name="description" content="一只菜鸟彬的漫漫学习之路">
+<meta property="og:type" content="website">
+<meta property="og:title" content="张大彬的博客">
+<meta property="og:url" content="http://yoursite.com/archives/2017/08/index.html">
 <meta property="og:site_name" content="张大彬的博客">
-<meta property="og:description" content="Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。
-
-Vue是一个mvvm框架(库)。指令以v-xxx为结构一段html代码 加一个json  再new出一个vue实例">
-<meta property="og:updated_time" content="2017-03-17T09:30:17.336Z">
+<meta property="og:description" content="一只菜鸟彬的漫漫学习之路">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue学习笔记（一）">
-<meta name="twitter:description" content="Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。
-
-Vue是一个mvvm框架(库)。指令以v-xxx为结构一段html代码 加一个json  再new出一个vue实例">
+<meta name="twitter:title" content="张大彬的博客">
+<meta name="twitter:description" content="一只菜鸟彬的漫漫学习之路">
   
     <link rel="alternative" href="/atom.xml" title="张大彬的博客" type="application/atom+xml">
   
@@ -157,217 +150,49 @@ Vue是一个mvvm框架(库)。指令以v-xxx为结构一段html代码 加一个j
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vue学习笔记（一）" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      vue学习笔记（一）
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/08/31/使用mongoDB（三）——聚合/" class="archive-article-date">
+  	<time datetime="2017-08-31T03:25:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-31</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/08/31/使用mongoDB（三）——聚合/">使用mongoDB（三）——聚合</a>
     </h1>
   
 
-        
-        <a href="/2017/03/02/vue学习笔记（一）/" class="archive-article-date">
-  	<time datetime="2017-03-02T11:40:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。</p>
-</blockquote>
-<p>Vue是一个mvvm框架(库)。指令以v-xxx为结构<br>一段html代码 加一个json  再new出一个vue实例</p>
-<a id="more"></a>
-<p>vue的雏形<br>要求：展示一条数据<br>html：<br> <code>&lt;div id=&quot;box&quot;&gt;
-        
-    &lt;/div&gt;</code></p>
-<p>js：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">   <span class="keyword">var</span> c = <span class="keyword">new</span> Vue(&#123;    <span class="comment">//new出Vue额对象</span></div><div class="line">           el:<span class="string">'#box'</span>, <span class="comment">//选择器，和jquery一样</span></div><div class="line">           data:&#123; <span class="comment">//data里可以放字符串，json ，数组， 布尔，数字</span></div><div class="line">              	msg:<span class="string">'document'</span> ,  <span class="comment">//要展示的数据内容</span></div><div class="line">              	num:<span class="number">12</span>,</div><div class="line">              	<span class="attr">bool</span>:<span class="literal">true</span>,</div><div class="line">		<span class="attr">myData</span>:[],</div><div class="line">		.......</div><div class="line">		&#125;，</div><div class="line">		methods:&#123;</div><div class="line">			get()&#123;</div><div class="line">			<span class="comment">//get方法</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>注意： 这里的c是可以任意起名的，也可以不写，不写的话就是this。想要拿到里面的num的值，可以这样 this.data.num </p>
-</blockquote>
-<hr>
-<h2 id="vue常用指令"><a href="#vue常用指令" class="headerlink" title="vue常用指令"></a>vue常用指令</h2><h3 id="1-v-model"><a href="#1-v-model" class="headerlink" title="1.v-model"></a>1.v-model</h3><p>一般放在表单元素上(input)   –&gt;     双向数据绑定<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"msg"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h3 id="2-v-for-循环数组"><a href="#2-v-for-循环数组" class="headerlink" title="2.v-for 循环数组"></a>2.v-for 循环数组</h3><p>新数组语法<br>        value in arr<br>        (value, index) in arr<br>新对象语法<br>        value in obj<br>        (value, key) in obj<br>        (value, key, index) in obj</p>
-<h3 id="3-v-on-click-”函数”-事件"><a href="#3-v-on-click-”函数”-事件" class="headerlink" title="3.v-on:click=”函数” 事件"></a>3.v-on:click=”函数” 事件</h3><p>v-on:click/mouseout/mouseover/dblclick/mousedown…..</p>
-<blockquote>
-<p>v-on:click=”show()”   一般是这样</p>
-</blockquote>
-<p>  @click=”show()” 这是简写 建议用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">methods:&#123;                      <span class="comment">//事件放到methods里</span></div><div class="line">        事件名:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;     <span class="comment">//可以直接写成  事件名 ()&#123;&#125;</span></div><div class="line">            alert(<span class="number">1</span>);</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>事件对象：<br>$event定死的，必须有$<br>@click(show($event))</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">methods:&#123;</div><div class="line">    <span class="attr">show</span>:<span class="function"><span class="keyword">function</span>(<span class="params">ev,n</span>)</span>&#123;</div><div class="line">        alert(ev.clientX);</div><div class="line">        alert(n);<span class="comment">//n也可以拿到</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>键盘事件：<br>@keydown    $event    ev.keyCode<br>@keyup</p>
-</blockquote>
-<p>常用键:<br>    回车<br>    a). @keyup.13<br>    b). @keyup.enter<br>    上、下、左、右<br>    @keyup/keydown.left<br>    @keyup/keydown.right<br>    @keyup/keydown.up<br>    @keyup/keydown.down</p>
-<h3 id="v-show-显示-隐藏"><a href="#v-show-显示-隐藏" class="headerlink" title="v-show 显示/隐藏"></a>v-show 显示/隐藏</h3><p>v-show=’true/false’; true是显示 false是隐藏</p>
-<h3 id="v-bind-属性"><a href="#v-bind-属性" class="headerlink" title="v-bind 属性"></a>v-bind 属性</h3><p>v-bind:src=””<br>    width/height/title….<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">"url"</span> <span class="attr">id</span>=<span class="string">"img"</span> <span class="attr">:width</span>=<span class="string">'a'</span>/&gt;</span></div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>特殊属性:class&amp;style<br>    :class=””    v-bind:class=””<br>    :style=””    v-bind:style=””</p>
-</blockquote>
-<h4 id="class"><a href="#class" class="headerlink" title="class"></a>class</h4><ol>
-<li><p>:class=[red,blue]  //对应的是数据 </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">data&#123;</div><div class="line">    <span class="attr">red</span>:<span class="string">'red'</span>,</div><div class="line">    blue<span class="string">'blue'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>:class=”{red:a,blue:b}” //对应的是 类名和数据</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">data&#123;</div><div class="line">    <span class="attr">a</span>:<span class="literal">true</span>,</div><div class="line">    <span class="attr">b</span>:<span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>：clsss=”json”;  //也可以吧json直接写到数据里，看起来更舒服-推荐</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">data&#123;</div><div class="line">    <span class="attr">json</span>:&#123;</div><div class="line">       <span class="attr">red</span>:<span class="literal">true</span>,</div><div class="line">       <span class="attr">blue</span>:<span class="literal">false</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="style"><a href="#style" class="headerlink" title="style"></a>style</h4><ol>
-<li>:styel=[c,d];/.每一个样式都是一条json<pre><code class="javascript">data:{
-<span class="attr">c</span>:{<span class="attr">color</span>:<span class="string">'red'</span>},
-<span class="attr">d</span>:{<span class="attr">backgroundColor</span>:<span class="string">'blue'</span>}<span class="comment">//复合样式用驼峰命名法</span>
-}
-</code></pre>
-</li>
-<li>:style={json};<pre><code class="javascript">data:{
- json{
-    <span class="attr">color</span>:<span class="string">"red"</span>,
-    <span class="attr">background</span>:<span class="string">"blue"</span>
- }
-}
-</code></pre>
-###</li>
-</ol>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/02/vue学习笔记（一）/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/03/10/模板使用心得/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          模板使用心得
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/02/09/hexo搭建博客/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo搭建Github静态博客</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-
-  
-    <div class="duoshuo"></div>
+    </div></section>
   
 
-
+    
 
 
           </div>
@@ -390,8 +215,8 @@ Vue是一个mvvm框架(库)。指令以v-xxx为结构一段html代码 加一个j
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
