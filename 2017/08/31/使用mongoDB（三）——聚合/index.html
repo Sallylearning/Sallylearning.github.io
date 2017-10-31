@@ -8,24 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>使用mongoDB（三）——聚合 | 张大彬的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="管道概念管道是由一个个功能节点组成的。聚合管道以一个集合中的所有文档作为开始，然后这些文档从一个操作节点流向下一个节点，每个操作节点对文档做相应的操作。这些操作可能会创建新的文档或者过滤掉一些不符合条件的文档，在管道中可以对文档进行重复操作。
-管道基本的功能一是对文档进行“过滤”，也就是筛选出符合条件的文档;二是对文档进行“变换”，也就是改变文档的输出形式。
-管道操作符管道操作符的种类：| Nam">
+  <meta name="description" content="这里我遇到一个问题：想要统计某一个人在某天一共发了多少个帖子。师兄让我研究一下聚合，我发现这个确实节约了不少时间~用mongo的聚合，我可以轻松聚合出一个人在同一天发了多少帖子∠( ᐛ 」∠)＿">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用mongoDB（三）——聚合">
 <meta property="og:url" content="http://yoursite.com/2017/08/31/使用mongoDB（三）——聚合/index.html">
 <meta property="og:site_name" content="张大彬的博客">
-<meta property="og:description" content="管道概念管道是由一个个功能节点组成的。聚合管道以一个集合中的所有文档作为开始，然后这些文档从一个操作节点流向下一个节点，每个操作节点对文档做相应的操作。这些操作可能会创建新的文档或者过滤掉一些不符合条件的文档，在管道中可以对文档进行重复操作。
-管道基本的功能一是对文档进行“过滤”，也就是筛选出符合条件的文档;二是对文档进行“变换”，也就是改变文档的输出形式。
-管道操作符管道操作符的种类：| Nam">
+<meta property="og:description" content="这里我遇到一个问题：想要统计某一个人在某天一共发了多少个帖子。师兄让我研究一下聚合，我发现这个确实节约了不少时间~用mongo的聚合，我可以轻松聚合出一个人在同一天发了多少帖子∠( ᐛ 」∠)＿">
 <meta property="og:image" content="http://i2.bvimg.com/587781/bc2cf24c9a7b9d3b.jpg">
 <meta property="og:image" content="http://i2.bvimg.com/587781/614b1520f2b85b93.png">
-<meta property="og:updated_time" content="2017-10-31T07:06:16.747Z">
+<meta property="og:updated_time" content="2017-10-31T07:45:23.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用mongoDB（三）——聚合">
-<meta name="twitter:description" content="管道概念管道是由一个个功能节点组成的。聚合管道以一个集合中的所有文档作为开始，然后这些文档从一个操作节点流向下一个节点，每个操作节点对文档做相应的操作。这些操作可能会创建新的文档或者过滤掉一些不符合条件的文档，在管道中可以对文档进行重复操作。
-管道基本的功能一是对文档进行“过滤”，也就是筛选出符合条件的文档;二是对文档进行“变换”，也就是改变文档的输出形式。
-管道操作符管道操作符的种类：| Nam">
+<meta name="twitter:description" content="这里我遇到一个问题：想要统计某一个人在某天一共发了多少个帖子。师兄让我研究一下聚合，我发现这个确实节约了不少时间~用mongo的聚合，我可以轻松聚合出一个人在同一天发了多少帖子∠( ᐛ 」∠)＿">
 <meta name="twitter:image" content="http://i2.bvimg.com/587781/bc2cf24c9a7b9d3b.jpg">
   
     <link rel="alternative" href="/atom.xml" title="张大彬的博客" type="application/atom+xml">
@@ -180,7 +174,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="管道概念"><a href="#管道概念" class="headerlink" title="管道概念"></a>管道概念</h2><p>管道是由一个个功能节点组成的。聚合管道以一个集合中的所有文档作为开始，然后这些文档从一个操作节点流向下一个节点，每个操作节点对文档做相应的操作。<br>这些操作可能会创建新的文档或者过滤掉一些不符合条件的文档，在管道中可以对文档进行重复操作。<br><img src="http://i2.bvimg.com/587781/bc2cf24c9a7b9d3b.jpg" alt="Markdown"></p>
+        <p>这里我遇到一个问题：想要统计某一个人在某天一共发了多少个帖子。师兄让我研究一下聚合，我发现这个确实节约了不少时间~<br>用mongo的聚合，我可以轻松聚合出一个人在同一天发了多少帖子∠( ᐛ 」∠)＿</p>
+<a id="more"></a>
+<h2 id="管道概念"><a href="#管道概念" class="headerlink" title="管道概念"></a>管道概念</h2><p>管道是由一个个功能节点组成的。聚合管道以一个集合中的所有文档作为开始，然后这些文档从一个操作节点流向下一个节点，每个操作节点对文档做相应的操作。<br>这些操作可能会创建新的文档或者过滤掉一些不符合条件的文档，在管道中可以对文档进行重复操作。<br><img src="http://i2.bvimg.com/587781/bc2cf24c9a7b9d3b.jpg" alt="Markdown"></p>
 <h2 id="管道基本的功能"><a href="#管道基本的功能" class="headerlink" title="管道基本的功能"></a>管道基本的功能</h2><p>一是对文档进行“过滤”，也就是筛选出符合条件的文档;<br>二是对文档进行“变换”，也就是改变文档的输出形式。<br><img src="http://i2.bvimg.com/587781/614b1520f2b85b93.png" alt="Markdown"></p>
 <h2 id="管道操作符"><a href="#管道操作符" class="headerlink" title="管道操作符"></a>管道操作符</h2><p>管道操作符的种类：<br>| Name              | Description           |<br>| —————– |:——————— |<br>| $project          | 重塑一个文档流。$project可以重命名、添加或删除字段，以及创建计算的值和子文档|<br>| $match            | 过滤文档流，只允许匹配的文档传递到下一个管道阶段。$match使用标准的MongoDB查询。                                     |<br>| $skip             | 从管道中跳过指定数量的文档并返回其余的文档|<br>| $group            | 将文档组合在一起，用于计算基于文档集合的聚合值|<br>| $sort            | 获取所有输入文档并将它们返回到已排序的文档流中|  </p>
 <h2 id="管道操作符详细使用说明"><a href="#管道操作符详细使用说明" class="headerlink" title="管道操作符详细使用说明"></a>管道操作符详细使用说明</h2><h4 id="1-project"><a href="#1-project" class="headerlink" title="1.  $project"></a>1.  $project</h4><p><b>数据投影，主要用于重命名、增加和删除字段</b><br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">db.article.aggregate(</div><div class="line">&#123; $project : &#123;</div><div class="line">title : 1 ,</div><div class="line">author : 1 ,</div><div class="line">&#125;&#125;</div><div class="line">);</div></pre></td></tr></table></figure></p>
