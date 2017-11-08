@@ -14,18 +14,18 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/10/模板使用心得/index.html">
 <meta property="og:site_name" content="张大彬的博客">
 <meta property="og:description" content="在CI框架中，利用one ui模板自己搭建一个自己想要的界面。o(*≧▽≦)ツ期间我遇见很多问题，ಥ_ಥ 马克一下我自己翻越的小山和摔过的坑。">
-<meta property="og:image" content="http://i4.bvimg.com/587781/3bab1f13376bab38.jpg">
-<meta property="og:image" content="http://i4.bvimg.com/587781/9ea6a4d42036adb8.jpg">
-<meta property="og:image" content="http://i4.bvimg.com/587781/35039dc056c29b20.jpg">
+<meta property="og:image" content="http://oz2sm5hay.bkt.clouddn.com/%E4%BE%A7%E8%BE%B9%E6%A0%8F%E9%AB%98%E4%BA%AE1.jpg">
+<meta property="og:image" content="http://oz2sm5hay.bkt.clouddn.com/%E4%BE%A7%E8%BE%B9%E6%A0%8F%E9%AB%98%E4%BA%AE2.jpg">
+<meta property="og:image" content="http://oz2sm5hay.bkt.clouddn.com/%E4%BE%A7%E8%BE%B9%E6%A0%8F%E9%AB%98%E4%BA%AE3.jpg">
 <meta property="og:image" content="http://i4.bvimg.com/587781/d57678299db2c90e.jpg">
 <meta property="og:image" content="http://i4.bvimg.com/587781/86f52a2c28c589a9.jpg">
 <meta property="og:image" content="http://i4.bvimg.com/587781/753cacd6c9d3c912.jpg">
 <meta property="og:image" content="http://i2.bvimg.com/587781/433ac689815c1808.jpg">
-<meta property="og:updated_time" content="2017-10-30T13:36:52.123Z">
+<meta property="og:updated_time" content="2017-11-08T01:52:13.767Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模板使用心得">
 <meta name="twitter:description" content="在CI框架中，利用one ui模板自己搭建一个自己想要的界面。o(*≧▽≦)ツ期间我遇见很多问题，ಥ_ಥ 马克一下我自己翻越的小山和摔过的坑。">
-<meta name="twitter:image" content="http://i4.bvimg.com/587781/3bab1f13376bab38.jpg">
+<meta name="twitter:image" content="http://oz2sm5hay.bkt.clouddn.com/%E4%BE%A7%E8%BE%B9%E6%A0%8F%E9%AB%98%E4%BA%AE1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="张大彬的博客" type="application/atom+xml">
   
@@ -180,7 +180,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在CI框架中，利用one ui模板自己搭建一个自己想要的界面。o(*≧▽≦)ツ<br>期间我遇见很多问题，ಥ_ಥ 马克一下我自己翻越的小山和摔过的坑。<br><a id="more"></a></p>
-<h2 id="侧边栏问题"><a href="#侧边栏问题" class="headerlink" title="侧边栏问题"></a>侧边栏问题</h2><h4 id="1-侧边栏高亮问题"><a href="#1-侧边栏高亮问题" class="headerlink" title="1.侧边栏高亮问题"></a>1.侧边栏高亮问题</h4><p><img src="http://i4.bvimg.com/587781/3bab1f13376bab38.jpg" alt="Markdown"><br><img src="http://i4.bvimg.com/587781/9ea6a4d42036adb8.jpg" alt="Markdown"></p>
+<h2 id="侧边栏问题"><a href="#侧边栏问题" class="headerlink" title="侧边栏问题"></a>侧边栏问题</h2><h4 id="1-侧边栏高亮问题"><a href="#1-侧边栏高亮问题" class="headerlink" title="1.侧边栏高亮问题"></a>1.侧边栏高亮问题</h4><figure class="half"><br>    <img src="http://oz2sm5hay.bkt.clouddn.com/%E4%BE%A7%E8%BE%B9%E6%A0%8F%E9%AB%98%E4%BA%AE1.jpg" alt="Markdown"><br>    <img src="http://oz2sm5hay.bkt.clouddn.com/%E4%BE%A7%E8%BE%B9%E6%A0%8F%E9%AB%98%E4%BA%AE2.jpg" alt="Markdown"><br></figure>
+
+
 <blockquote>
 <p>解决办法 ：<br>在inc文件下的config.php文件里面 </p>
 </blockquote>
@@ -189,13 +191,13 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">array(</div><div class="line">    &apos;name&apos;  =&gt; &apos;&lt;span class=&quot;sidebar-mini-hide&quot;&gt;用户列表&lt;/span&gt;&apos;,</div><div class="line">    &apos;icon&apos;  =&gt; &apos;fa fa-list&apos;,</div><div class="line">    &apos;urlc&apos;   =&gt; &apos;userlist_weibo&apos;,</div><div class="line">    &apos;url&apos;   =&gt; &apos;/weibo/userlist_weibo&apos;</div><div class="line">),</div></pre></td></tr></table></figure>
 <p>最后改变在inc文件下的views文件夹里面的Template.php文件里面的</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$link_active    = $link_urlc == $this-&gt;main_nav_active ? true : false;</div></pre></td></tr></table></figure>
-<p><img src="http://i4.bvimg.com/587781/35039dc056c29b20.jpg" alt="Markdown"></p>
+<p><img src="http://oz2sm5hay.bkt.clouddn.com/%E4%BE%A7%E8%BE%B9%E6%A0%8F%E9%AB%98%E4%BA%AE3.jpg" alt="Markdown"></p>
 <h4 id="2-不同用户看到的侧边栏不同"><a href="#2-不同用户看到的侧边栏不同" class="headerlink" title="2.不同用户看到的侧边栏不同"></a>2.不同用户看到的侧边栏不同</h4><p><img src="http://i4.bvimg.com/587781/d57678299db2c90e.jpg" alt="Markdown"><br><img src="http://i4.bvimg.com/587781/86f52a2c28c589a9.jpg" alt="Markdown"></p>
 <blockquote>
 <p>解决办法 ：<br>在inc文件下的config.php文件里面 ，创建多个Menu </p>
 </blockquote>
 <p><img src="http://i4.bvimg.com/587781/753cacd6c9d3c912.jpg" alt="Markdown"></p>
-<p>然后修改inc文件下的views文件夹里面的Template.php文件里面的build_nav函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * Builds main navigation</div><div class="line"> *</div><div class="line"> * @param   boolean     $print True to print the navigation and False to return it</div><div class="line"> *</div><div class="line"> * @return  string      Returns the navigation if $print is set to false</div><div class="line"> */</div><div class="line">public function build_nav($print = true) &#123;</div><div class="line">    // Build navigation</div><div class="line">    $role=$_SESSION[&apos;role&apos;];</div><div class="line">    //echo $_SESSION[&apos;username&apos;];</div><div class="line">    if($role==&quot;admin&quot;)&#123;</div><div class="line">        $this-&gt;build_nav_array($this-&gt;main_nav_admin);</div><div class="line">     &#125;</div><div class="line">    if ($role==&quot;common&quot;) &#123;</div><div class="line">        $this-&gt;build_nav_array($this-&gt;main_nav_common);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // Print or return navigation</div><div class="line">    if ($print) &#123;</div><div class="line">        echo $this-&gt;nav_html;</div><div class="line">    &#125; else &#123;</div><div class="line">        return $this-&gt;nav_html;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后修改inc文件下的class文件夹里面的Template.php文件里面的build_nav函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * Builds main navigation</div><div class="line"> *</div><div class="line"> * @param   boolean     $print True to print the navigation and False to return it</div><div class="line"> *</div><div class="line"> * @return  string      Returns the navigation if $print is set to false</div><div class="line"> */</div><div class="line">public function build_nav($print = true) &#123;</div><div class="line">    // Build navigation</div><div class="line">    $role=$_SESSION[&apos;role&apos;];</div><div class="line">    //echo $_SESSION[&apos;username&apos;];</div><div class="line">    if($role==&quot;admin&quot;)&#123;</div><div class="line">        $this-&gt;build_nav_array($this-&gt;main_nav_admin);</div><div class="line">     &#125;</div><div class="line">    if ($role==&quot;common&quot;) &#123;</div><div class="line">        $this-&gt;build_nav_array($this-&gt;main_nav_common);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // Print or return navigation</div><div class="line">    if ($print) &#123;</div><div class="line">        echo $this-&gt;nav_html;</div><div class="line">    &#125; else &#123;</div><div class="line">        return $this-&gt;nav_html;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="入口文件问题"><a href="#入口文件问题" class="headerlink" title="入口文件问题"></a>入口文件问题</h2><p>修改默认入口文件，默认情况下是welcome.php</p>
 <blockquote>
 <p>解决办法<br>1.直接修改welcome里面的东西，改成自己想要的。<br>2.修改config文件夹里面的routes.php</p>
