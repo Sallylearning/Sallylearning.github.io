@@ -16,7 +16,7 @@
 <meta property="og:description" content="这里我遇到一个问题：想要统计某一个人在某天一共发了多少个帖子。师兄让我研究一下聚合，我发现这个确实节约了不少时间~用mongo的聚合，我可以轻松聚合出一个人在同一天发了多少帖子∠( ᐛ 」∠)＿">
 <meta property="og:image" content="http://oz2sm5hay.bkt.clouddn.com/%E8%81%9A%E5%90%881.jpg">
 <meta property="og:image" content="http://oz2sm5hay.bkt.clouddn.com/%E8%81%9A%E5%90%882.png">
-<meta property="og:updated_time" content="2017-11-20T08:55:02.446Z">
+<meta property="og:updated_time" content="2017-11-20T08:56:13.768Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用mongoDB（三）——聚合">
 <meta name="twitter:description" content="这里我遇到一个问题：想要统计某一个人在某天一共发了多少个帖子。师兄让我研究一下聚合，我发现这个确实节约了不少时间~用mongo的聚合，我可以轻松聚合出一个人在同一天发了多少帖子∠( ᐛ 」∠)＿">
@@ -182,7 +182,37 @@
 <h2 id="管道基本的功能"><a href="#管道基本的功能" class="headerlink" title="管道基本的功能"></a>管道基本的功能</h2><p>一是对文档进行“过滤”，也就是筛选出符合条件的文档;<br>二是对文档进行“变换”，也就是改变文档的输出形式。</p>
 <center><br>    <img src="http://oz2sm5hay.bkt.clouddn.com/%E8%81%9A%E5%90%882.png"><br></center>
 
-<h2 id="管道操作符"><a href="#管道操作符" class="headerlink" title="管道操作符"></a>管道操作符</h2><p>管道操作符的种类：<br>| Name              | Description           |<br>| —————– |:——————— |<br>| $project          | 重塑一个文档流。$project可以重命名、添加或删除字段，以及创建计算的值和子文档|<br>| $match            | 过滤文档流，只允许匹配的文档传递到下一个管道阶段。$match使用标准的MongoDB查询。                                     |<br>| $skip             | 从管道中跳过指定数量的文档并返回其余的文档|<br>| $group            | 将文档组合在一起，用于计算基于文档集合的聚合值|<br>| $sort            | 获取所有输入文档并将它们返回到已排序的文档流中|  </p>
+<h2 id="管道操作符"><a href="#管道操作符" class="headerlink" title="管道操作符"></a>管道操作符</h2><p>管道操作符的种类：</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$project</td>
+<td style="text-align:left">重塑一个文档流。$project可以重命名、添加或删除字段，以及创建计算的值和子文档</td>
+</tr>
+<tr>
+<td>$match</td>
+<td style="text-align:left">过滤文档流，只允许匹配的文档传递到下一个管道阶段。$match使用标准的MongoDB查询。</td>
+</tr>
+<tr>
+<td>$skip</td>
+<td style="text-align:left">从管道中跳过指定数量的文档并返回其余的文档</td>
+</tr>
+<tr>
+<td>$group</td>
+<td style="text-align:left">将文档组合在一起，用于计算基于文档集合的聚合值</td>
+</tr>
+<tr>
+<td>$sort</td>
+<td style="text-align:left">获取所有输入文档并将它们返回到已排序的文档流中</td>
+</tr>
+</tbody>
+</table>
 <h2 id="管道操作符详细使用说明"><a href="#管道操作符详细使用说明" class="headerlink" title="管道操作符详细使用说明"></a>管道操作符详细使用说明</h2><h4 id="1-project"><a href="#1-project" class="headerlink" title="1.  $project"></a>1.  $project</h4><p><b>数据投影，主要用于重命名、增加和删除字段</b><br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">db.article.aggregate(</div><div class="line">    &#123; </div><div class="line">        $project : &#123;</div><div class="line">            title : 1 ,</div><div class="line">            author : 1 ,</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">);</div></pre></td></tr></table></figure></p>
 <p>这样的话结果中就只还有_id,tilte和author三个字段了，默认情况下_id字段是被包含的，如果要想不包含_id话可以加上:<br><figure class="highlight plain"><figcaption><span>: 0 ,```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">除此之外使用$project还可以重命名字段名和子文档的字段名:</div></pre></td></tr></table></figure></p>
 <p>db.article.aggregate(<br>    {<br>        $project : {<br>            title : 1 ,<br>            stats : {<br>                pv : “$pageViews”,<br>                foo : “$other.foo”,<br>                dpv : { $add:[“$pageViews”, 10]}   </p>
