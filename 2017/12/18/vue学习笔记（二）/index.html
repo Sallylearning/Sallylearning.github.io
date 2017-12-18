@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="张大彬的博客">
 <meta property="og:description" content="Vue路由 (=ᴗ=)✧">
 <meta property="og:image" content="http://oz2sm5hay.bkt.clouddn.com/vue%E8%B7%AF%E7%94%B1.png">
-<meta property="og:updated_time" content="2017-12-18T08:31:56.093Z">
+<meta property="og:updated_time" content="2017-12-18T08:33:09.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue学习笔记（二）">
 <meta name="twitter:description" content="Vue路由 (=ᴗ=)✧">
@@ -182,7 +182,7 @@
 <h3 id="第一个单页面应用"><a href="#第一个单页面应用" class="headerlink" title="第一个单页面应用"></a>第一个单页面应用</h3><p>这个单页面应用有两个路径：/home和/about，与这两个路径对应的是两个组件Home和About。</p>
 <p><img src="http://oz2sm5hay.bkt.clouddn.com/vue%E8%B7%AF%E7%94%B1.png"></p>
 <h4 id="step1-创建组件"><a href="#step1-创建组件" class="headerlink" title="step1 创建组件"></a>step1 创建组件</h4><p>首先引入vue.js和vue-router.js：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"js/vue.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script src=<span class="string">"js/vue-router.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"js/vue.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script src=<span class="string">"js/vue-router.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>然后创建两个组件构造器Home和About：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bear = Vue.extend(&#123; </div><div class="line">	<span class="attr">template</span>: <span class="string">'&lt;div&gt;&lt;h1&gt;Home&lt;/h1&gt;&lt;p&gt;&#123;&#123;msg&#125;&#125;&lt;img src="bear.jpg"&gt;&lt;/p&gt;&lt;/div&gt;'</span>,</div><div class="line">    <span class="attr">data</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">msg</span>: <span class="string">'Hello, vue router!'</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">//可以简写为</span></div><div class="line"><span class="comment">// var bear = &#123; template :'&lt;img src="bear.jpg"&gt;'&#125;</span></div><div class="line"><span class="keyword">var</span> rabbit = Vue.extend(&#123; </div><div class="line">	<span class="attr">template</span>: <span class="string">'&lt;div&gt;&lt;h1&gt;About&lt;/h1&gt;&lt;p&gt;This is the tutorial about vue-router.&lt;/p&gt;&lt;img src="rabbit.jpg"&gt;&lt;/div&gt;'</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h4 id="step2-定义Router，映射路由"><a href="#step2-定义Router，映射路由" class="headerlink" title="step2 定义Router，映射路由"></a>step2 定义Router，映射路由</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> routes = [</div><div class="line">	&#123;</div><div class="line">		<span class="attr">path</span>:<span class="string">'/bear'</span>,<span class="attr">component</span>:bear</div><div class="line">	&#125;,</div><div class="line">	&#123;</div><div class="line">		<span class="attr">path</span>:<span class="string">'/rabbit'</span>,<span class="attr">component</span>:rabbit</div><div class="line">	&#125;</div><div class="line">]</div></pre></td></tr></table></figure>
@@ -227,6 +227,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
