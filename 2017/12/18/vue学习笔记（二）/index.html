@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/8 | 张大彬的博客</title>
+  <title>vue学习笔记（二） | 张大彬的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一只菜鸟彬的漫漫学习之路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="张大彬的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/08/index.html">
+  <meta name="description" content="Vue路由 (=ᴗ=)✧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue学习笔记（二）">
+<meta property="og:url" content="http://yoursite.com/2017/12/18/vue学习笔记（二）/index.html">
 <meta property="og:site_name" content="张大彬的博客">
-<meta property="og:description" content="一只菜鸟彬的漫漫学习之路">
+<meta property="og:description" content="Vue路由 (=ᴗ=)✧">
+<meta property="og:image" content="http://oz2sm5hay.bkt.clouddn.com/vue%E8%B7%AF%E7%94%B1.png">
+<meta property="og:updated_time" content="2017-12-18T08:31:56.093Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张大彬的博客">
-<meta name="twitter:description" content="一只菜鸟彬的漫漫学习之路">
+<meta name="twitter:title" content="vue学习笔记（二）">
+<meta name="twitter:description" content="Vue路由 (=ᴗ=)✧">
+<meta name="twitter:image" content="http://oz2sm5hay.bkt.clouddn.com/vue%E8%B7%AF%E7%94%B1.png">
   
     <link rel="alternative" href="/atom.xml" title="张大彬的博客" type="application/atom+xml">
   
@@ -150,60 +153,162 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue学习笔记（二）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/31/使用mongoDB（三）——聚合/" class="archive-article-date">
-  	<time datetime="2017-08-31T03:25:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-31</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/31/使用mongoDB（三）——聚合/">使用mongoDB（三）——聚合</a>
+    <h1 class="article-title" itemprop="name">
+      vue学习笔记（二）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mongodb</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2017/12/18/vue学习笔记（二）/" class="archive-article-date">
+  	<time datetime="2017-12-18T04:02:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Vue路由 (=ᴗ=)✧</p>
+<a id="more"></a>
+<h2 id="vue路由"><a href="#vue路由" class="headerlink" title="vue路由"></a>vue路由</h2><blockquote>
+<p>对于单页应用，官方提供了vue-router进行路由跳转的处理</p>
+</blockquote>
+<p>传统的页面应用，是用一些超链接来实现页面切换和跳转的。<br>在vue-router单页面应用中，则是路径之间的切换，也就是组件的切换。</p>
+<h3 id="第一个单页面应用"><a href="#第一个单页面应用" class="headerlink" title="第一个单页面应用"></a>第一个单页面应用</h3><p>这个单页面应用有两个路径：/home和/about，与这两个路径对应的是两个组件Home和About。</p>
+<p><img src="http://oz2sm5hay.bkt.clouddn.com/vue%E8%B7%AF%E7%94%B1.png"></p>
+<h4 id="step1-创建组件"><a href="#step1-创建组件" class="headerlink" title="step1 创建组件"></a>step1 创建组件</h4><p>首先引入vue.js和vue-router.js：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"js/vue.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script src=<span class="string">"js/vue-router.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>然后创建两个组件构造器Home和About：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bear = Vue.extend(&#123; </div><div class="line">	<span class="attr">template</span>: <span class="string">'&lt;div&gt;&lt;h1&gt;Home&lt;/h1&gt;&lt;p&gt;&#123;&#123;msg&#125;&#125;&lt;img src="bear.jpg"&gt;&lt;/p&gt;&lt;/div&gt;'</span>,</div><div class="line">    <span class="attr">data</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">msg</span>: <span class="string">'Hello, vue router!'</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">//可以简写为</span></div><div class="line"><span class="comment">// var bear = &#123; template :'&lt;img src="bear.jpg"&gt;'&#125;</span></div><div class="line"><span class="keyword">var</span> rabbit = Vue.extend(&#123; </div><div class="line">	<span class="attr">template</span>: <span class="string">'&lt;div&gt;&lt;h1&gt;About&lt;/h1&gt;&lt;p&gt;This is the tutorial about vue-router.&lt;/p&gt;&lt;img src="rabbit.jpg"&gt;&lt;/div&gt;'</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="step2-定义Router，映射路由"><a href="#step2-定义Router，映射路由" class="headerlink" title="step2 定义Router，映射路由"></a>step2 定义Router，映射路由</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> routes = [</div><div class="line">	&#123;</div><div class="line">		<span class="attr">path</span>:<span class="string">'/bear'</span>,<span class="attr">component</span>:bear</div><div class="line">	&#125;,</div><div class="line">	&#123;</div><div class="line">		<span class="attr">path</span>:<span class="string">'/rabbit'</span>,<span class="attr">component</span>:rabbit</div><div class="line">	&#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+<blockquote>
+<p>每个路由应该映射一个组件。 其中”component” 可以是通过 Vue.extend()创建的组件构造器，或者，只是一个组件配置对象。  </p>
+</blockquote>
+<p>调用router的map方法映射路由，每条路由以key-value的形式存在，key是路径，value是组件。<br>例如：’/home’是一条路由的key，它表示路径；{component: Home}则表示该条路由映射的组件。</p>
+<h4 id="step3-创建-router-实例，然后传-routes-配置"><a href="#step3-创建-router-实例，然后传-routes-配置" class="headerlink" title="step3 创建 router 实例，然后传 routes 配置"></a>step3 创建 router 实例，然后传 <code>routes</code> 配置</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  	routes <span class="comment">// （缩写）相当于 routes: routes</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>调用router的map方法映射路由，每条路由以key-value的形式存在，key是路径，value是组件。<br>例如：’/home’是一条路由的key，它表示路径；{component: Home}则表示该条路由映射的组件。</p>
+<h4 id="step4-使用v-link指令"><a href="#step4-使用v-link指令" class="headerlink" title="step4 使用v-link指令"></a>step4 使用v-link指令</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;router-link to="/bear"&gt;布朗熊&lt;/router-link&gt;</div><div class="line">&lt;router-link to="/rabbit"&gt;可妮兔&lt;/router-link&gt;</div></pre></td></tr></table></figure>
+<p>在a元素上使用v-link指令跳转到指定路径。</p>
+<h4 id="step5-使用标签"><a href="#step5-使用标签" class="headerlink" title="step5 使用标签"></a>step5 使用<router-view>标签</router-view></h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">"/bear"</span>&gt;</span>布朗熊<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">"/rabbit"</span>&gt;</span>可妮兔<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">hr</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在页面上使用<router-view></router-view>标签，它用于渲染匹配的组件。</p>
+<h4 id="step6-创建和挂载根实例"><a href="#step6-创建和挂载根实例" class="headerlink" title="step6 创建和挂载根实例"></a>step6 创建和挂载根实例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  router</div><div class="line">&#125;).$mount(<span class="string">'#app'</span>) <span class="comment">//vm.$mount() 手动地挂载一个未挂载的实例</span></div></pre></td></tr></table></figure>
+<p> 记得要通过 router 配置参数注入路由，从而让整个应用都有路由功能</p>
 
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/12/18/vue学习笔记（二）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/12/18/vue应用（一）——todolist/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue—应应用——todolist</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -226,8 +331,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
