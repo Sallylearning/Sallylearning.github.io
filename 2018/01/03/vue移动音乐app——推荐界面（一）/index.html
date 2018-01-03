@@ -6,17 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 张大彬的博客</title>
+  <title>vue移动音乐app——推荐界面（一） | 张大彬的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一只菜鸟彬的漫漫学习之路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="张大彬的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="歌手界面
+歌手界面在页面骨架上增加滑动框和下方上下滑动的热门歌单推荐">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue移动音乐app——推荐界面（一）">
+<meta property="og:url" content="http://yoursite.com/2018/01/03/vue移动音乐app——推荐界面（一）/index.html">
 <meta property="og:site_name" content="张大彬的博客">
-<meta property="og:description" content="一只菜鸟彬的漫漫学习之路">
+<meta property="og:description" content="歌手界面
+歌手界面在页面骨架上增加滑动框和下方上下滑动的热门歌单推荐">
+<meta property="og:image" content="http://oz2sm5hay.bkt.clouddn.com/vue-music%E6%8E%A8%E8%8D%90%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://oz2sm5hay.bkt.clouddn.com/jsonp.png">
+<meta property="og:image" content="http://oz2sm5hay.bkt.clouddn.com/jsonp_api.png">
+<meta property="og:image" content="http://oz2sm5hay.bkt.clouddn.com/vue-music%E6%8E%A8%E8%8D%90%E7%95%8C%E9%9D%A2_slider.gif">
+<meta property="og:updated_time" content="2018-01-03T02:10:03.104Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张大彬的博客">
-<meta name="twitter:description" content="一只菜鸟彬的漫漫学习之路">
+<meta name="twitter:title" content="vue移动音乐app——推荐界面（一）">
+<meta name="twitter:description" content="歌手界面
+歌手界面在页面骨架上增加滑动框和下方上下滑动的热门歌单推荐">
+<meta name="twitter:image" content="http://oz2sm5hay.bkt.clouddn.com/vue-music%E6%8E%A8%E8%8D%90%E7%95%8C%E9%9D%A2.png">
   
     <link rel="alternative" href="/atom.xml" title="张大彬的博客" type="application/atom+xml">
   
@@ -150,36 +159,100 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue移动音乐app——推荐界面（一）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/03/vue移动音乐app——推荐界面（一）/" class="archive-article-date">
-  	<time datetime="2018-01-03T02:08:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/03/vue移动音乐app——推荐界面（一）/">vue移动音乐app——推荐界面（一）</a>
+    <h1 class="article-title" itemprop="name">
+      vue移动音乐app——推荐界面（一）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/01/03/vue移动音乐app——推荐界面（一）/" class="archive-article-date">
+  	<time datetime="2018-01-03T02:08:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="歌手界面"><a href="#歌手界面" class="headerlink" title="歌手界面"></a>歌手界面</h1><blockquote>
+<h4>歌手界面在页面骨架上增加滑动框和下方上下滑动的热门歌单推荐</h4>
+
+</blockquote>
+<p><img src="http://oz2sm5hay.bkt.clouddn.com/vue-music%E6%8E%A8%E8%8D%90%E7%95%8C%E9%9D%A2.png"></p>
+<a id="more"></a>
+<h3 id="step1：数据抓取"><a href="#step1：数据抓取" class="headerlink" title="step1：数据抓取"></a>step1：数据抓取</h3><blockquote>
+<p>采用jsonp</p>
+</blockquote>
+<p>JSONP是一种非正式传输协议，该协议的一个要点就是允许用户传递一个callback参数给服务端，然后服务端返回数据时会将这个callback参数作为函数名来包裹住JSON数据，这样客户端就可以随意定制自己的函数来自动处理返回数据了</p>
+<p><img src="http://oz2sm5hay.bkt.clouddn.com/jsonp.png"></p>
+<h5 id="step2-1：NPM安装依赖"><a href="#step2-1：NPM安装依赖" class="headerlink" title="step2.1：NPM安装依赖"></a>step2.1：NPM安装依赖</h5><p>npm install jsonp</p>
+<p><img src="http://oz2sm5hay.bkt.clouddn.com/jsonp_api.png"></p>
+<h5 id="step2-2：jsnop的封装"><a href="#step2-2：jsnop的封装" class="headerlink" title="step2.2：jsnop的封装"></a>step2.2：jsnop的封装</h5><p>很多地方会用到jsonp，把他放在common的js中。<br>首先引入jsonp, 然后对外暴露一个jsonp方法【jsonp(url, data, option)】，我们把传给服务器的url分开，一个纯净的url，一个是后面的配置data。然后返回一个promise函数</p>
+<h5 id="step2-3：url的拼装"><a href="#step2-3：url的拼装" class="headerlink" title="step2.3：url的拼装"></a>step2.3：url的拼装</h5><p>把相同的配置option统一放在一起，用字符串拼接在一起</p>
+<blockquote>
+<h4>数据抓取代码：</h4>
+
+</blockquote>
+<p>common/js/jsonp:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> originJSONP <span class="keyword">from</span> <span class="string">'jsonp'</span>   <span class="comment">// step1：引入依赖</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">jsonp</span>(<span class="params">url, data, option</span>) </span>&#123;</div><div class="line">  url += (url.indexOf(<span class="string">'?'</span>) &lt; <span class="number">0</span> ? <span class="string">'?'</span> : <span class="string">'&amp;'</span>) + param(data)   <span class="comment">// step3：拼接url</span></div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;    <span class="comment">// step2：返回一个promise函数，里面调用引入的jsonp</span></div><div class="line">    originJSONP(url, option, (err, data) =&gt; &#123;</div><div class="line">      <span class="keyword">if</span> (!err) &#123;</div><div class="line">        resolve(data)</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">        reject(err)</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">param</span>(<span class="params">data</span>) </span>&#123;     <span class="comment">// step3：拼接url</span></div><div class="line">  <span class="keyword">let</span> url = <span class="string">''</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> data) &#123;</div><div class="line">    <span class="keyword">let</span> value = data[k] !== <span class="literal">undefined</span> ? data[k] : <span class="string">''</span></div><div class="line">    url += <span class="string">'&amp;'</span> + k + <span class="string">'='</span> + <span class="built_in">encodeURIComponent</span>(value)</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> url ? url.substring(<span class="number">1</span>) : <span class="string">''</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>base/slider/slider:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/ecmascript-6"</span>&gt;</div><div class="line">  <span class="keyword">import</span> &#123;getRecommend, getDiscList&#125; <span class="keyword">from</span> <span class="string">'api/recommend'</span></div><div class="line">  <span class="keyword">import</span> &#123;ERR_OK&#125; <span class="keyword">from</span> <span class="string">'api/config'</span></div><div class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">    data() &#123;</div><div class="line">      <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">recommends</span>: []</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    created() &#123;</div><div class="line">      <span class="keyword">this</span>._getRecommend()</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">methods</span>: &#123;</div><div class="line">      _getRecommend() &#123;</div><div class="line">        getRecommend().then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</div><div class="line">          <span class="keyword">if</span> (res.code === ERR_OK) &#123;</div><div class="line">            <span class="keyword">this</span>.recommends = res.data.slider</div><div class="line">            <span class="comment">// console.log(this.recommends)</span></div><div class="line">          &#125;</div><div class="line">        &#125;)</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<hr>
+
+
+<h3 id="step2：把数据显示在滑动框中"><a href="#step2：把数据显示在滑动框中" class="headerlink" title="step2：把数据显示在滑动框中"></a>step2：把数据显示在滑动框中</h3><blockquote>
+<p>采用better-scroll，<a href="https://ustbhuangyi.github.io/better-scroll/#/" target="_blank" rel="external">https://ustbhuangyi.github.io/better-scroll/#/</a></p>
+</blockquote>
+<h5 id="step2-1：NPM安装依赖-1"><a href="#step2-1：NPM安装依赖-1" class="headerlink" title="step2.1：NPM安装依赖"></a>step2.1：NPM安装依赖</h5><p>npm install better-scroll</p>
+<blockquote>
+<p>滑动组件算是一个基础组件，为了便于管理，我们把slider剥离出来，单独放在一个文件夹【base文件】内，然后需要的时候【recommend.vue文件】引入即可</p>
+</blockquote>
+<h5 id="step2-2-创建slider-vue"><a href="#step2-2-创建slider-vue" class="headerlink" title="step2.2 创建slider.vue"></a>step2.2 创建slider.vue</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">	<span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"slider"</span> <span class="attr">ref</span>=<span class="string">"slider"</span>&gt;</span></span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"slider-group"</span> <span class="attr">ref</span>=<span class="string">"sliderGroup"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>  //插槽，外部引用slider会被插入到这个插槽中</div><div class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">&lt;<span class="regexp">/template&gt;</span></div></pre></td></tr></table></figure>
+<p>插槽的结构在要recommend.vue里面编写【要先引入slider这个组件】<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;slider&gt;</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"item in recommends"</span>&gt;</span> //  recommends使我们jsonp抓取的数据</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"item.linkUrl"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"needsclick"</span> @<span class="attr">load</span>=<span class="string">"loadImage"</span> <span class="attr">:src</span>=<span class="string">"item.picUrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">slider</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>然后看看js部分，首先要引入我们安装的better-scroll<br>然后<br>设置slider设置props，可以从外部控制这个组件有哪些属性<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">  <span class="keyword">import</span> BScroll <span class="keyword">from</span> <span class="string">'better-scroll'</span></div><div class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="attr">props</span>: &#123;</div><div class="line">      <span class="attr">loop</span>: &#123;</div><div class="line">        <span class="attr">type</span>: <span class="built_in">Boolean</span>,</div><div class="line">        <span class="attr">default</span>: <span class="literal">true</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">autoPlay</span>: &#123;</div><div class="line">        <span class="attr">type</span>: <span class="built_in">Boolean</span>,</div><div class="line">        <span class="attr">default</span>: <span class="literal">true</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">interval</span>: &#123;</div><div class="line">        <span class="attr">type</span>: <span class="built_in">Number</span>,</div><div class="line">        <span class="attr">default</span>: <span class="number">4000</span> <span class="comment">// 4秒滚动一次</span></div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    mounted() &#123;</div><div class="line">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        <span class="comment">// 在这里最好不要写函数，统一在mothods里面写函数，然后在此调用即可</span></div><div class="line">        <span class="keyword">this</span>._setSliderWidth() </div><div class="line">        <span class="keyword">this</span>._initSlider()</div><div class="line">      &#125;, <span class="number">20</span>) <span class="comment">//  setTimeout(fn, 20) 也是可以的（20 ms 是一个经验值，每一个 Tick 约为 17 ms），对用户体验而言都是无感知的。</span></div><div class="line">    ,</div><div class="line">    <span class="attr">methods</span>: &#123;</div><div class="line">      _setSliderWidth(isResize) &#123;</div><div class="line">        <span class="comment">//Vue.js 提供了我们一个获取 DOM 对象的接口—— vm.$refs。在这里，我们通过了 this.$refs.wrapper 访问到了这个 DOM 对象</span></div><div class="line">        <span class="keyword">this</span>.children = <span class="keyword">this</span>.$refs.sliderGroup.children <span class="comment">// 找到sliderGroup下面的子元素</span></div><div class="line">        <span class="keyword">let</span> width = <span class="number">0</span></div><div class="line">        <span class="keyword">let</span> sliderWidth = <span class="keyword">this</span>.$refs.slider.clientWidth <span class="comment">// Element.clientWidth 属性表示元素的内部宽度，以像素计。该属性包括内边距，但不包括垂直滚动条（如果有）、边框和外边距。</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>.children.length; i++) &#123;</div><div class="line">          <span class="keyword">let</span> child = <span class="keyword">this</span>.children[i]</div><div class="line">          addClass(child, <span class="string">'slider-item'</span>) <span class="comment">//加样式 利用封装好的方法</span></div><div class="line">          child.style.width = sliderWidth + <span class="string">'px'</span>  <span class="comment">//子容器的宽度都是这个sliderWidth那么宽，展示的时候只能那么大</span></div><div class="line">          width += sliderWidth  <span class="comment">//累加总的width</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.loop &amp;&amp; !isResize) &#123;</div><div class="line">          width += <span class="number">2</span> * sliderWidth  <span class="comment">// 在循环时，系统会自动加上两个child【第一个和最后一个】，所以长度要相应的要加上2倍</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">this</span>.$refs.sliderGroup.style.width = width + <span class="string">'px'</span></div><div class="line">      &#125;,</div><div class="line">      _initSlider() &#123;</div><div class="line">        <span class="keyword">this</span>.slider = <span class="keyword">new</span> BScoll(<span class="keyword">this</span>.$refs.slider, &#123; <span class="comment">// better-scroll相关配置</span></div><div class="line">          scrollX: <span class="literal">true</span>,</div><div class="line">          <span class="attr">scrollY</span>: <span class="literal">false</span>,</div><div class="line">          <span class="attr">momentum</span>: <span class="literal">false</span>,</div><div class="line">          <span class="attr">snap</span>: &#123;</div><div class="line">            <span class="attr">loop</span>: <span class="keyword">this</span>.loop,</div><div class="line">            <span class="attr">threshold</span>: <span class="number">0.3</span>,</div><div class="line">            <span class="attr">speed</span>: <span class="number">400</span></div><div class="line">          &#125;</div><div class="line">        &#125;)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="step3：完善slider"><a href="#step3：完善slider" class="headerlink" title="step3：完善slider"></a>step3：完善slider</h3><h5 id="step2-1-创建dots（轮播图下面的小圆点）"><a href="#step2-1-创建dots（轮播图下面的小圆点）" class="headerlink" title="step2.1 创建dots（轮播图下面的小圆点）"></a>step2.1 创建dots（轮播图下面的小圆点）</h5><p>在mounted中初始化，在template中引用并遍历dots<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dots"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"dot"</span> <span class="attr">v-for</span>=<span class="string">"(item, index) in dots"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">_initDots() &#123;</div><div class="line">    <span class="keyword">this</span>.dots = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="keyword">this</span>.children.length) <span class="comment">//dots是定义的一个数据，初始为空数组</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="step2-2-完善dots，选中时dots高亮"><a href="#step2-2-完善dots，选中时dots高亮" class="headerlink" title="step2.2 完善dots，选中时dots高亮"></a>step2.2 完善dots，选中时dots高亮</h5><p>在数据中初始currentPageIndex: 0，修改template中的dots标签，给他们绑定一个class<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"dot"</span> <span class="attr">v-for</span>=<span class="string">"(item, index) in dots"</span> <span class="attr">:class</span>=<span class="string">"&#123;active: currentPageIndex === index&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>初始化slider时绑定一个事件’scrollEnd’<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.slider.on(<span class="string">'scrollEnd'</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">let</span> pageIndex = <span class="keyword">this</span>.slider.getCurrentPage().pageX</div><div class="line">  <span class="keyword">this</span>.currentPageIndex = pageIndex</div><div class="line"></div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h3 id="step4：实现自动滚动"><a href="#step4：实现自动滚动" class="headerlink" title="step4：实现自动滚动"></a>step4：实现自动滚动</h3><p>之前在props定义了autoplay这个属性<br>直接在mounted中加入&amp;初始化slider时加入<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.autoPlay) &#123;</div><div class="line">  <span class="keyword">this</span>._play()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后编写_play函数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">_play() &#123;</div><div class="line">  clearTimeout(<span class="keyword">this</span>.timer)</div><div class="line">  <span class="keyword">this</span>.timer = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">this</span>.slider.next()</div><div class="line">  &#125;, <span class="keyword">this</span>.interval)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="step5：适应不同大小的窗口"><a href="#step5：适应不同大小的窗口" class="headerlink" title="step5：适应不同大小的窗口"></a>step5：适应不同大小的窗口</h3><p>监听window的resize事件，重新设置sliderWidth就可以了<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'resize'</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">if</span> (!<span class="keyword">this</span>.slider) &#123;</div><div class="line">    <span class="keyword">return</span></div><div class="line">  &#125;</div><div class="line">  <span class="keyword">this</span>._setSliderWidth(<span class="literal">true</span>)</div><div class="line">  <span class="keyword">this</span>.slider.refresh() <span class="comment">// 宽度发生改变，重新刷新</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>为了防止每次都要加两个sliderWidth，我们加上一个参数isResize<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">_setSliderWidth(isResize) &#123;</div><div class="line">  <span class="keyword">this</span>.children = <span class="keyword">this</span>.$refs.sliderGroup.children</div><div class="line"></div><div class="line">  <span class="keyword">let</span> width = <span class="number">0</span></div><div class="line">  <span class="keyword">let</span> sliderWidth = <span class="keyword">this</span>.$refs.slider.clientWidth</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>.children.length; i++) &#123;</div><div class="line">    <span class="keyword">let</span> child = <span class="keyword">this</span>.children[i]</div><div class="line">    addClass(child, <span class="string">'slider-item'</span>)</div><div class="line"></div><div class="line">    child.style.width = sliderWidth + <span class="string">'px'</span></div><div class="line">    width += sliderWidth</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.loop &amp;&amp; !isResize) &#123;</div><div class="line">    width += <span class="number">2</span> * sliderWidth</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">this</span>.$refs.sliderGroup.style.width = width + <span class="string">'px'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p></p><h3>嗒哒！！！</h3><br> <img src="http://oz2sm5hay.bkt.clouddn.com/vue-music%E6%8E%A8%E8%8D%90%E7%95%8C%E9%9D%A2_slider.gif"><p></p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,375 +268,88 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/18/vue学习笔记（二）/" class="archive-article-date">
-  	<time datetime="2017-12-18T04:02:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/18/vue学习笔记（二）/">vue学习笔记（二）</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/01/03/vue移动音乐app——推荐界面（一）/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/18/vue应用（一）——todolist/" class="archive-article-date">
-  	<time datetime="2017-12-18T03:52:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-18</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/18/vue应用（一）——todolist/">vue应用（一）——todolist</a>
-    </h1>
+  
+    <a href="/2017/12/18/vue学习笔记（二）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue学习笔记（二）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/20/CI的AJAX分页/" class="archive-article-date">
-  	<time datetime="2017-11-20T09:31:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/20/CI的AJAX分页/">CI的AJAX分页</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CI</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/31/使用mongoDB（三）——聚合/" class="archive-article-date">
-  	<time datetime="2017-08-31T03:25:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/31/使用mongoDB（三）——聚合/">使用mongoDB（三）——聚合</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mongodb</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/17/使用mongoDB（二）——CI中用mongo实现增删改查/" class="archive-article-date">
-  	<time datetime="2017-07-17T14:55:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/17/使用mongoDB（二）——CI中用mongo实现增删改查/">使用mongoDB（二）——CI中用mongo实现增删改查</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CI</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mongodb</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/17/使用mongoDB（一）——准备工作/" class="archive-article-date">
-  	<time datetime="2017-07-17T14:41:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/17/使用mongoDB（一）——准备工作/">使用mongoDB（一）——准备工作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mongodb</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/10/模板使用心得/" class="archive-article-date">
-  	<time datetime="2017-03-10T08:05:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/10/模板使用心得/">模板使用心得</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CI框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/02/vue学习笔记（一）/" class="archive-article-date">
-  	<time datetime="2017-03-02T11:40:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/vue学习笔记（一）/">vue学习笔记（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/09/hexo搭建博客/" class="archive-article-date">
-  	<time datetime="2017-02-09T02:21:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/09/hexo搭建博客/">Hexo搭建Github静态博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -586,8 +372,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
